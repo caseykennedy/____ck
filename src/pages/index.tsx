@@ -66,13 +66,12 @@ type PageShape = {
 const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
   // Scrambler params
   const scrambleStrings = [
-    'creators',
-    'designers',
-    'developers',
+    'friends',
+    'clients',
+    'peeps',
     'collaborators',
     'alchemists',
-    'explorers',
-    'generators'
+    'explorers'
   ]
   const DelayedFade = useSpring({
     config: config.molasses,
@@ -82,16 +81,12 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
   })
   return (
     <>
-      <Section pt={3} pb={5}>
+      <Section pb={5}>
         <Flex
           width={1}
-          flexDirection="column"
-          justifyContent="flex-end"
-          alignItems="flex-end"
-          textAlign="right"
         >
-          <Box width={1}>
-            <Heading as="h1" fontSize={[3, 3, 5]} className="t--dual-col">
+          <Box width={1/2}>
+            <Heading as="h1" fontSize={[3]}>
               {pageContext.intro}
             </Heading>
           </Box>
@@ -101,7 +96,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
       <Section pt={0} pb={4}>
         <AnimatedBox width={1} mt={'10vh'} style={DelayedFade}>
           <Heading as="h2" fontSize={[4, 5, 6]} mb={0}>
-            We are
+            Welcome
           </Heading>
         </AnimatedBox>
         <Box width={1} mb={'10vh'}>
@@ -116,7 +111,9 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Box>
       </Section>
 
-      <Section>
+      <Section pt={'30vh'} />
+
+      {/* <Section>
         <Flex width={1} justifyContent="flex-end" alignItems="flex-end">
           <Box as="figure" width={[4 / 12]} mb={-7}>
             <ImageHover
@@ -134,9 +131,9 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             <ProjectSlider slides={projectData} />
           </Box>
         </Flex>
-      </Section>
+      </Section> */}
 
-      <Section>
+      {/* <Section>
         <Flex
           width={1}
           flexDirection="column"
@@ -148,9 +145,9 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             <Heading as="h3" className="t--dual-col">{pageContext.about.detail}</Heading>
           </Box>
         </Flex>
-      </Section>
+      </Section> */}
 
-      <Section>
+      {/* <Section>
         <Box width={1}>
           <Heading
             as="h2"
@@ -162,9 +159,9 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             </Link>
           </Text>
         </Box>
-      </Section>
+      </Section> */}
 
-      <Section pt={0}>
+      {/* <Section pt={0}>
         <Flex alignItems="flex-end">
           <Box as="figure" width={[7 / 12]}>
             <ImageHover
@@ -185,9 +182,9 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             />
           </Box>
         </Flex>
-      </Section>
+      </Section> */}
 
-      <Section>
+      {/* <Section>
         <Heading as="h2">{pageContext.testimonial.quote}</Heading>
         <Text as="p" fontSize={2} mb={0}>
           {pageContext.testimonial.author}
@@ -195,33 +192,9 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         <Text as="p" fontSize={2} color="tertiary" mt={1}>
           {pageContext.testimonial.company}
         </Text>
-      </Section>
+      </Section> */}
 
-      <Section pt={0}>
-        <Flex justifyContent="flex-end">
-          <Box width={[1, 1, 1, 2 / 3]}>
-            <ImgMatch src="merida-meetup.jpg" altText="core37" />
-          </Box>
-        </Flex>
-      </Section>
-
-      <Section pt={1}>
-        <Flex
-          width={1}
-          flexDirection="column"
-          justifyContent="flex-end"
-          alignItems="flex-end"
-          textAlign="right"
-        >
-          <Box width={[10 / 12, 9 / 12, 9 / 12]}>
-            <Heading as="h3" mb={0} className="t--dual-col">
-              {pageContext.contact.detail}
-            </Heading>
-          </Box>
-        </Flex>
-      </Section>
-
-      <Section pt={0} pb={0}>
+      {/* <Section pt={0} pb={0}>
         <Box width={7 / 12}>
           <Text as="p" fontSize={4} mt={7}>
             <a href="mailto:me@caseykennedy.me" className="t--link  js-hover">
@@ -229,7 +202,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             </a>
           </Text>
         </Box>
-      </Section>
+      </Section> */}
     </>
   )
 }

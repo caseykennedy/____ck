@@ -73,7 +73,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           ref={mainRef}
         >
           {children}
-          <Footer navData={navData} />
+          {/* <Footer navData={navData} /> */}
         </S.Main>
       </S.Wrapper>
     </ThemeProvider>

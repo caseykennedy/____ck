@@ -3,7 +3,7 @@
 ############################################################
 
 index:
-  intro: Through design, we turn visions into products, brands and experiences. Collaborating with teams, agencies, visionaries and maybe even you.
+  intro: Actively exploring visual design, front-end development and inner space ✌️
 
   projects:
     title: Look mah, no hands!
@@ -36,7 +36,7 @@ index:
     cta: say hello 🤙
 
 ############################################################
-    # About page
+# About page
 ############################################################
 
 about:
@@ -113,12 +113,7 @@ about:
   approach:
     title: Design is<br />problem solving
     lead: approach
-    detail: "We leave no stone unturned and
-    take a flexible approach to brand and technical descovery. Each
-    project is unique and needs personal evaluation. We focus on
-    bringing vision to reality, minus the fluff. Floating without
-    resistance and in constant motion. Searching for that spark.
-    Action with intention. Our lean setup allows us to work directly and inclusively with our clients to build an ongoing relationship that benefits them as they grow."
+    detail: We leave no stone unturned and take a flexible approach to brand and technical descovery. Each project is unique and needs personal evaluation. We focus on bringing vision to reality, minus the fluff. Floating without resistance and in constant motion. Searching for that spark. Action with intention. Our lean setup allows us to work directly and inclusively with our clients to build an ongoing relationship that benefits them as they grow.
 
   manifesto:
     - We strive to be impeccable with our word. We believe in clear, upfront communication.

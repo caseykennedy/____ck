@@ -35,7 +35,7 @@ const Footer: React.FC<Props> = ({ navData }) => {
       pt={[6, 6, 7]}
       pb={[5, 4, 4]}
       pr={theme.gutter}
-      pl={[3, 3, 0]}
+      pl={[3]}
     >
       <Flex
         width={1}

@@ -25,10 +25,10 @@ export const Header = styled(AnimatedFlex)`
   justify-content: space-between;
 
   /* border-right: 1px solid #333333; */
-  height: ${theme.sidebarWidth.collapsed};
+  /* height: ${theme.sidebarWidth.collapsed}; */
   position: relative;
   left: 0;
-  width: 100%;
+  width: ${theme.siteWidth};
   padding: ${theme.space[3]};
 
   transition: all 0.777s ease-in-out;
@@ -36,11 +36,11 @@ export const Header = styled(AnimatedFlex)`
 
   /* background: ${p => p.bg}; */
 
-  @media ${theme.mq.medium} {
+  /* @media ${theme.mq.medium} {
     position: fixed;
     width: ${theme.sidebarWidth.collapsed};
     height: 100%;
-  }
+  } */
 
   &.expanded {
     width: ${theme.sidebarWidth.expanded};
@@ -55,24 +55,24 @@ export const HeaderInner = styled(Flex)`
   flex-direction: row;
   align-items: center;
 
-  @media ${theme.mq.medium} {
+  /* @media ${theme.mq.medium} {
     flex-direction: column;
     align-items: flex-start;
     height: 100vh;
-  }
+  } */
 `
 
 export const Logo = styled(Box)`
   font-size: calc(${theme.fontSizes[2]});
   font-weight: 400;
-  transform: rotate(0deg);
+  /* transform: rotate(0deg); */
 
-  @media ${theme.mq.medium} {
+  /* @media ${theme.mq.medium} {
     transform: rotate(-90deg);
     transform-origin: 0 0;
     position: relative;
     top: calc(${theme.space[3]} * 6.8);
-  }
+  } */
 
   /* .symbol {
     animation: ${Rotate} 20s infinite linear;
@@ -98,15 +98,10 @@ export const Logo = styled(Box)`
 `
 
 export const Nav = styled.nav`
-  display: flex;
+  display: inherit;
   flex-wrap: nowrap;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-
-  @media ${theme.mq.medium} {
-    display: inherit;
-    width: 100%;
-  }
 
   a {
     text-decoration: none;
@@ -126,7 +121,6 @@ export const Nav = styled.nav`
 `
 
 export const Toggle = styled.div`
-  color: ${theme.colors.white};
   font-size: calc(${theme.fontSizes[2]});
   font-weight: 400;
 
@@ -137,7 +131,7 @@ export const Toggle = styled.div`
   }
 
   @media ${theme.mq.medium} {
-    transform: rotate(-90deg);
+    /* transform: rotate(-90deg); */
     transform-origin: 5px 5px;
     width: ${theme.space[6]};
   }

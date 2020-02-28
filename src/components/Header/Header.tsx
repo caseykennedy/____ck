@@ -74,15 +74,8 @@ const Header: React.FC<Props> = ({ navData, mainRef }) => {
           <S.Logo>
             <Link to="/" className="js-hover" aria-label="core37, back to home">
               {/* <Logo /> */}
-              <Text color="white" width="200px">
-                <Text
-                  fontSize={'1.2rem'}
-                  fontWeight={600}
-                  style={{ display: 'inline-block' }}
-                >
-                  ●○
-                </Text>{' '}
-                core37
+              <Text>
+                casey kennedy
               </Text>
             </Link>
           </S.Logo>

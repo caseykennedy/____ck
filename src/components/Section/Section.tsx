@@ -21,7 +21,7 @@ const Section: React.FC<Props> = ({ children, bg, color, pt, pr, pb, id }) => (
       width={1}
       // maxWidth={theme.maxWidth}
       pr={pr}
-      pl={[3, 3, 0]}
+      pl={3}
       m="0 auto"
     >
       {children}

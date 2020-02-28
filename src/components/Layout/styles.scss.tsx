@@ -19,7 +19,7 @@ import { AnimatedBox } from '../../elements'
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   @media ${theme.mq.medium} {
@@ -32,11 +32,11 @@ export const Main = styled(animated.main)`
   margin-bottom: 0rem;
   /* min-width: 0; slick-slider overflow fix */
 
-  width: 100%;
+  width: ${theme.siteWidth};
 
-  @media ${theme.mq.medium} {
+  /* @media ${theme.mq.medium} {
     width: calc(100vw - ${theme.sidebarWidth.collapsed});
-  }
+  } */
 `
 
 export const Footer = styled.footer<{ color?: string[] }>`

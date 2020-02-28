@@ -25,6 +25,7 @@ type ThemeShape = {
   }
   strokeWidth: string
   maxWidth: number
+  siteWidth: string
   grid: {
     [key: string]: string
   }
@@ -75,8 +76,8 @@ const theme: ThemeShape = {
 
   colors: {
     body: '#000000',
-    text: '#ffffff',
-    background: '#000000',
+    text: '#000000',
+    background: '#cccccc',
     
     primary: '#ffffff',
     secondary: '#444444',
@@ -146,6 +147,7 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   maxWidth: 1680,
+  siteWidth: '100vw',
 
   grid: {
     gap: '0.5rem'
@@ -162,7 +164,7 @@ const theme: ThemeShape = {
 
   transform: {
     matrix: {
-      from: 'matrix(1, 0, 0, 1, 0, 32)',
+      from: 'matrix(1, 0, 0, 1, 32, 32)',
       to: 'matrix(1, 0, 0, 1, 0, 0)'
     }
   },

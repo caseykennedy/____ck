@@ -18,7 +18,7 @@ export const Cursor = styled.span`
   left: 0;
   width: 16px;
   height: 16px;
-  background-color: white;
+  background-color: black;
   border-radius: 50%;
 
   transform: translate3d(var(--mouse-x), var(--mouse-y), 0);
@@ -26,7 +26,7 @@ export const Cursor = styled.span`
 
   &::after {
     content: '';
-    background-color: white;
+    background-color: black;
     border-radius: 50%;
     /* border: 2px solid white; */
 
