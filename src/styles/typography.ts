@@ -90,8 +90,8 @@ const Typography = css`
   }
 
   ::selection {
-    color: white;
-    background-color: ${theme.colors.primary};
+    color: ${theme.colors.white};
+    background-color: ${theme.colors.accent};
   }
 
   html {
@@ -186,7 +186,7 @@ const Typography = css`
   }
 
   p {
-    font-size: ${theme.fontSizes[3]};
+    font-size: ${theme.fontSizes[2]};
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.25em;
 
@@ -251,7 +251,7 @@ const Typography = css`
 
   ul {
     li {
-      font-size: ${theme.fontSizes[3]};
+      font-size: ${theme.fontSizes[2]};
       padding-bottom: ${theme.space[2]};
       position: relative;
       /* margin-top: ${theme.space[5]}; */

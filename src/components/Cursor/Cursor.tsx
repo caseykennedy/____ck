@@ -50,7 +50,12 @@ const Cursor: React.FC = () => {
       })
     }
   })
-  return <S.Cursor className={cursorHovered ? 'state--hover' : ''} />
+  return (
+    <>
+      <S.Cursor />
+      <S.CursorOuter className={cursorHovered ? 'state--hover' : ''} />
+    </>
+  )
 }
 
 export default Cursor

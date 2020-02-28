@@ -53,7 +53,7 @@ type ThemeShape = {
 // Begin theme
 // ___________________________________________________________________
 
-const breakpoints: string[] = ['380px', '770px', '1024px']
+const breakpoints: string[] = ['380px', '770px']
 // Aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -67,8 +67,7 @@ const theme: ThemeShape = {
   breakpoints,
   mq: {
     small: `(min-width: calc(${breakpoints[0]} + 1px))`,
-    medium: `(min-width: calc(${breakpoints[1]} + 1px))`,
-    large: `(min-width: calc(${breakpoints[2]} + 1px))`
+    medium: `(min-width: calc(${breakpoints[1]} + 1px))`
   },
 
   // Color palette
@@ -76,14 +75,14 @@ const theme: ThemeShape = {
 
   colors: {
     body: '#000000',
-    text: '#000000',
-    background: '#cccccc',
+    text: 'darkslategray',
+    background: 'antiquewhite',
     
     primary: '#ffffff',
     secondary: '#444444',
     tertiary: '#999999',
 
-    accent: 'magenta',
+    accent: 'darkslategray',
 
     black: '#000000',
     white: '#ffffff',

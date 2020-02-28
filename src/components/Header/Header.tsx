@@ -75,7 +75,7 @@ const Header: React.FC<Props> = ({ navData, mainRef }) => {
             <Link to="/" className="js-hover" aria-label="core37, back to home">
               {/* <Logo /> */}
               <Text>
-                casey kennedy
+                ck
               </Text>
             </Link>
           </S.Logo>
@@ -86,7 +86,7 @@ const Header: React.FC<Props> = ({ navData, mainRef }) => {
               aria-label="toggle menu"
             >
               <Scrambler
-                text={!isNavOpen ? 'menu' : 'close'}
+                text={!isNavOpen ? 'tl;dr' : 'close'}
                 characters={'+-'}
                 duration={500}
                 renderIn={500}

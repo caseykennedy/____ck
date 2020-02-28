@@ -38,7 +38,7 @@ export const Overlay = styled.div`
 
     visibility: hidden;
     opacity: 0;
-    transform: matrix(1, 0, 0, 1, 0, 32);
+    transform: matrix(1, 0, 0, 1, 32, 32);
 
     transition: ${theme.transition.all};
 

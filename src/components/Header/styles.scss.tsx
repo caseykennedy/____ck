@@ -24,23 +24,13 @@ export const Header = styled(AnimatedFlex)`
   flex-wrap: nowrap;
   justify-content: space-between;
 
-  /* border-right: 1px solid #333333; */
-  /* height: ${theme.sidebarWidth.collapsed}; */
-  position: relative;
+  position: fixed;
   left: 0;
   width: ${theme.siteWidth};
   padding: ${theme.space[3]};
 
-  transition: all 0.777s ease-in-out;
+  transition: all 0.333s ease-in-out;
   z-index: 31;
-
-  /* background: ${p => p.bg}; */
-
-  /* @media ${theme.mq.medium} {
-    position: fixed;
-    width: ${theme.sidebarWidth.collapsed};
-    height: 100%;
-  } */
 
   &.expanded {
     width: ${theme.sidebarWidth.expanded};
@@ -54,25 +44,12 @@ export const HeaderInner = styled(Flex)`
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-
-  /* @media ${theme.mq.medium} {
-    flex-direction: column;
-    align-items: flex-start;
-    height: 100vh;
-  } */
 `
 
 export const Logo = styled(Box)`
   font-size: calc(${theme.fontSizes[2]});
   font-weight: 400;
-  /* transform: rotate(0deg); */
-
-  /* @media ${theme.mq.medium} {
-    transform: rotate(-90deg);
-    transform-origin: 0 0;
-    position: relative;
-    top: calc(${theme.space[3]} * 6.8);
-  } */
+  position: relative;
 
   /* .symbol {
     animation: ${Rotate} 20s infinite linear;
@@ -105,8 +82,6 @@ export const Nav = styled.nav`
 
   a {
     text-decoration: none;
-    /* text-align: center; */
-    /* color: ${p => readableColor(`${p.color}`)}; */
     font-size: ${theme.fontSizes[2]};
     line-height: 1.5;
 
@@ -131,7 +106,6 @@ export const Toggle = styled.div`
   }
 
   @media ${theme.mq.medium} {
-    /* transform: rotate(-90deg); */
     transform-origin: 5px 5px;
     width: ${theme.space[6]};
   }

@@ -71,9 +71,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <Header mainRef={mainRef} navData={navData} />
         <S.Main
           ref={mainRef}
-          style={{
-            transform: offset.interpolate(calcTranslate)
-          }}
+          // style={{
+          //   transform: offset.interpolate(calcTranslate)
+          // }}
         >
           {children}
           {/* <Footer navData={navData} /> */}

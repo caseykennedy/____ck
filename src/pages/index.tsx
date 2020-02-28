@@ -80,20 +80,49 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
     to: { opacity: 1, transform: theme.transform.matrix.to }
   })
   return (
-    <>
-      <Section pb={5}>
-        <Flex
-          width={1}
-        >
-          <Box width={1/2}>
-            <Heading as="h1" fontSize={[3]}>
-              {pageContext.intro}
-            </Heading>
+    <Flex
+      justifyContent="space-between"
+      flexDirection="column"
+      style={{ height: '100vh' }}
+    >
+      <Section pt={12} pb={3} bg="white">
+        <Box width={1}>
+          <Heading as="h1" fontSize={[4, 4, 6]} mb={0}>
+            <Scrambler
+              text={'almost there...'}
+              characters={'+-'}
+              duration={1000}
+              renderIn={1000}
+              changeFrom={'abcdefghijk'}
+            />
+          </Heading>
+        </Box>
+      </Section>
+
+      <Section bg="antiquewhite">
+        <Flex flexWrap="wrap">
+          <Box width={[1, 1, 1 / 3]} pr={6} mb={4}>
+            <Text as="p">In the meantime, please find me here:</Text>
+          </Box>
+          <Box width={[1, 1, 2 / 3]}>
+            <Text as="ul">
+              <li>me@caseykennedy.me</li>
+              <li>dribbble</li>
+              <li>github</li>
+              <li>linkedin</li>
+            </Text>
           </Box>
         </Flex>
       </Section>
 
-      <Section pt={0} pb={4}>
+      <Section pt={4} pb={4} bg="darkslategray" color="white">
+        <Text as="span" fontSize={3} style={{ textTransform: 'uppercase' }}>
+          Let's build a blazing fast website! Let's build a blazing fast
+          website!
+        </Text>
+      </Section>
+
+      {/* <Section pt={0} pb={4}>
         <AnimatedBox width={1} mt={'10vh'} style={DelayedFade}>
           <Heading as="h2" fontSize={[4, 5, 6]} mb={0}>
             Welcome
@@ -109,7 +138,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             />
           </Heading>
         </Box>
-      </Section>
+      </Section> */}
 
       {/* <Section>
         <Flex width={1} justifyContent="flex-end" alignItems="flex-end">
@@ -183,13 +212,15 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
       </Section> */}
 
       {/* <Section>
-        <Heading as="h2">{pageContext.testimonial.quote}</Heading>
-        <Text as="p" fontSize={2} mb={0}>
-          {pageContext.testimonial.author}
-        </Text>
-        <Text as="p" fontSize={2} color="tertiary" mt={1}>
-          {pageContext.testimonial.company}
-        </Text>
+        <Box width={1 / 2}>
+          <Heading as="p">{pageContext.testimonial.quote}</Heading>
+          <Text as="p" mb={0}>
+            {pageContext.testimonial.author}
+          </Text>
+          <Text as="p" color="tertiary">
+            {pageContext.testimonial.company}
+          </Text>
+        </Box>
       </Section> */}
 
       {/* <Section pt={0} pb={0}>
@@ -201,7 +232,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
           </Text>
         </Box>
       </Section> */}
-    </>
+    </Flex>
   )
 }
 

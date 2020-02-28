@@ -9,42 +9,44 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 export const Cursor = styled.span`
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   pointer-events: none;
-  z-index: 99999;
+  z-index: 11000;
 
   position: fixed;
   top: 0;
   left: 0;
   width: 16px;
   height: 16px;
+
   background-color: black;
+  border: 2px solid black;
   border-radius: 50%;
 
   transform: translate3d(var(--mouse-x), var(--mouse-y), 0);
   /* transition: transform 80ms ease-out; */
+`
 
-  &::after {
-    content: '';
-    background-color: black;
-    border-radius: 50%;
-    /* border: 2px solid white; */
+export const CursorOuter = styled.span`
+  pointer-events: none;
+  z-index: 11000;
 
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 20px;
-    height: 20px;
+  position: fixed;
+  top: 4px;
+  left: 4px;
 
-    transform: translate3d(-50%, -50%, 0);
-    transition: width .222s ease, height .222s ease;
-  }
+  background-color: transparent;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+
+  transform: translate3d(var(--mouse-x), var(--mouse-y), 0);
+  transition: width 0.222s ease, height 0.222s ease, transform 80ms ease-out;
 
   &.state--hover {
-    &::after {
-      width: 64px;
-      height: 64px;
-    }
+    width: 100px;
+    height: 100px;
   }
 `
 
