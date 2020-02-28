@@ -111,8 +111,6 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Box>
       </Section>
 
-      <Section pt={'30vh'} />
-
       {/* <Section>
         <Flex width={1} justifyContent="flex-end" alignItems="flex-end">
           <Box as="figure" width={[4 / 12]} mb={-7}>

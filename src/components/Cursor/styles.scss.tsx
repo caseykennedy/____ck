@@ -33,8 +33,8 @@ export const Cursor = styled.span`
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 
     transform: translate3d(-50%, -50%, 0);
     transition: width .222s ease, height .222s ease;
@@ -42,8 +42,8 @@ export const Cursor = styled.span`
 
   &.state--hover {
     &::after {
-      width: 100px;
-      height: 100px;
+      width: 64px;
+      height: 64px;
     }
   }
 `
