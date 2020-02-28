@@ -1,0 +1,21 @@
+social:
+  - name: 'dribbble'
+    link: 'https://dribbble.com/caseykennedy'
+  - name: 'github'
+    link: 'https://github.com/caseykennedy'
+  - name: 'instagram'
+    link: 'https://instagram.com/core37'
+
+locations:
+  - city: 'Reno'
+    state: 'Nevada'
+    country: 'USA'
+    flag: '🇺🇸'
+    contact: 'casey kennedy'
+    email: 'casey@core37.agency'
+  - city: 'Merida'
+    state: 'Yucatan'
+    country: 'Mexico'
+    flag: '🇲🇽'
+    contact: 'chris mena'
+    email: 'chris@core37.agency'

@@ -1,0 +1,6 @@
+- name: 'index'
+  link: '/'
+- name: 'projects'
+  link: '/projects'
+- name: 'about'
+  link: '/about'

@@ -1,0 +1,161 @@
+############################################################
+# Index page
+############################################################
+
+index:
+  intro: Through design, we turn visions into products, brands and experiences. Collaborating with teams, agencies, visionaries and maybe even you.
+
+  projects:
+    title: Look mah, no hands!
+
+  logofolio:
+    title: Logofolio
+    years: 2010-2019
+
+  about:
+    title: Out of the box, but<br />never out of touch.
+    detail: Just like your business, we see brands as a constant work in progress. Always testing. Always iterating. Always evolving. Always learning.
+    cta: learn more about us 👉
+    link: /about
+
+  dribbble:
+    title: Dribbble shots
+    years: 2017-2020
+
+  posters:
+    title: Poster collection
+    years: 2016-2020
+
+  testimonial:
+    quote: I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.
+    author: Laura Zander
+    company: Madeline Tosh
+
+  contact:
+    detail: Need help with a new or existing brand? Want to build a high-conversion ecommerce site? Shall we discuss reality and the meaning of life?
+    cta: say hello 🤙
+
+############################################################
+    # About page
+############################################################
+
+about:
+  pathname: '/about'
+  title: about us
+  desc: ''
+  banner: 'unsplash--1.jpg'
+
+  intro: This is the foundation of our pursuit. It's also at the core of our relationship with you. We collaborate with a range of clients that recognize the value of design and we continue to work alongside them as they grow.
+
+  lead: We explore without rules, without boundaries, and without fear. We push ourselves—testing the limits of imagination and feeding our curiosity for the world around us.
+
+  metrics:
+    - title: countries<br />occupying
+      stat: '02'
+    - title: sites<br />launched
+      stat: '24'
+    - title: awards<br />received
+      stat: '13'
+    - title: logos<br />designed
+      stat: '137'
+    - title: collective<br />experience
+      stat: '24'
+    - title: vision<br />quests
+      stat: '7'
+
+  info:
+    title: Grounded<br />collaboration
+    team:
+      title: team
+      members:
+        - name: chris mena
+          bio: I dont like my chickens alive, I like em dead and deep fried. You ever heard of Popeyes?
+          skills:
+            - react
+            - gatsby
+            - graphql
+            - nunchaku
+            - figma
+            - illustrator
+            - studio
+            - astral projection
+            - research
+            - ECMAScript
+            - foosball
+          photo: unsplash--1.jpg
+        - name: casey kennedy
+          bio: Casey is just this guy, you know? Designer, developer, aspiring time-traveler. Actively exploring visual design, technology and inner space ✌️
+          skills:
+            - react
+            - gatsby
+            - graphql
+            - nunchaku
+            - figma
+            - illustrator
+            - studio
+            - astral projection
+            - research
+            - ECMAScript
+            - foosball
+            - brutalism
+            - typography
+            - shopify
+            - JAMstack
+            - lightsaber
+            - nextjs
+            - typescript
+            - project management
+          photo: 'unsplash-psyc.jpg'
+    aim:
+      title: aim
+      detail: To find balance within and without and positively impact others through creative experience.
+
+  approach:
+    title: Design is<br />problem solving
+    lead: approach
+    detail: "We leave no stone unturned and
+    take a flexible approach to brand and technical descovery. Each
+    project is unique and needs personal evaluation. We focus on
+    bringing vision to reality, minus the fluff. Floating without
+    resistance and in constant motion. Searching for that spark.
+    Action with intention. Our lean setup allows us to work directly and inclusively with our clients to build an ongoing relationship that benefits them as they grow."
+
+  manifesto:
+    - We strive to be impeccable with our word. We believe in clear, upfront communication.
+    - We're all in this together and doing our best. Don't be a dick.
+    - We're in it to win it, we won't take cover when the going gets tough.
+    - We work hard, stay playful and never take ourselves too seriously. We're on a planet hurling through space, afterall.
+    - We aim to act with awareness and intention and from a center of gratitude.
+    - Design is not tequila. It can't make everyone happy.
+    - We leave work happy and that's non-negotiable. We will all be dead soon, brands and companies included.
+    - We may not be your cup of tea, that's fine. The world will go on :)
+
+  capabilities:
+    title: Brand-functional<br />design systems
+    lead: capabilities
+    column:
+      - title: brand
+        services:
+          - visual identity systems
+          - voice + tone
+          - naming + nomenclature
+          - brand system guidelines
+          - packaging systems
+          - ad campaigns
+          - brand implementation
+          - wayfinding
+          - sound design
+          - space + signage
+      - title: digital
+        services:
+          - technical strategy
+          - user experience
+          - prototyping
+          - visual design
+          - web development
+          - ecommerce
+          - shopify development
+          - digital strategy
+          - performance + optimizations
+          - redesigns + rebuilds
+          - ongoing success

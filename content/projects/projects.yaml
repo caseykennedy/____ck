@@ -1,0 +1,57 @@
+- title: 'Cannavative'
+  title_detail: 'Cannavative Cannabis Extracts'
+  slug: '/cannavative-identity-design'
+  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
+  industry: 'cannabis'
+  category: 'design'
+  color: 'green'
+  images: 'cannavative'
+  cover: './cannavative/cover2.jpg'
+  services:
+    - logo identity
+    - packaging
+
+- title: 'Cahuilla Casino Hotel'
+  title_detail: 'Cahuilla Casino Hotel'
+  slug: 'cahuilla-casino-hotel-branding'
+  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
+  industry: 'gaming'
+  category: 'brand + digital'
+  color: 'pink'
+  images: 'neon'
+  cover: './neon/cover.jpg'
+  services:
+    - branding
+    - logo identity
+    - visual design
+    - web development
+  website: 'cahuillacasinohotel.com'
+
+- title: 'Blackbird'
+  title_detail: 'Blackbird Cannabis Logistics'
+  slug: 'blackbird-web-design'
+  desc: 'I needed a creative agency at the top of design thinking and leading edge in technical capabilities. core37 was a perfect match. They delivered the perfect end to end digital platform, on time and in full. I loved their creativity, their high quality standards and the strong partnership with my team.'
+  industry: 'cannabis'
+  category: '2017'
+  color: 'white'
+  images: 'blackbird'
+  cover: './blackbird/cover.png'
+  services:
+    - ux
+    - visual design
+    - prototyping
+
+- title: 'Bottle Barn'
+  title_detail: 'Bottle Barn Wine & Spirits'
+  slug: 'bottle-barn'
+  desc: Bottle Barn is Sonoma County's largest discount wine and spirits shop. Their goal was to bring their shop online. We designed them a humble identity and a custom Shopify theme and delivered a fully functional, ent to end digital platform to sell wine and keep in touch with their shoppers.
+  industry: 'ecommerce'
+  category: 'design + development'
+  color: '#82726b'
+  images: 'bottle-barn'
+  cover: './bottle-barn/cover.jpg'
+  services:
+    - logo identity
+    - visual design
+    - shopify development
+  website: 'bottlebarn.com'
