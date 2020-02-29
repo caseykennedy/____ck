@@ -80,49 +80,73 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
     to: { opacity: 1, transform: theme.transform.matrix.to }
   })
   return (
-    <Flex
-      justifyContent="space-between"
-      flexDirection="column"
-      style={{ height: '100vh' }}
-    >
-      <Section pt={12} pb={3} bg="white">
-        <Box width={1}>
-          <Heading as="h1" fontSize={[4, 4, 6]} mb={0}>
+    <>
+      <Section pt={3} pb={3}>
+        <Flex
+          justifyContent="space-between"
+          flexDirection="column"
+          style={{ minHeight: '100vh' }}
+        >
+          <Heading as="h2">
             <Scrambler
-              text={'almost there...'}
+              text={'hang tight...'}
               characters={'+-'}
               duration={1000}
               renderIn={1000}
               changeFrom={'abcdefghijk'}
             />
           </Heading>
-        </Box>
-      </Section>
-
-      <Section bg="antiquewhite">
-        <Flex flexWrap="wrap">
-          <Box width={[1, 1, 1 / 3]} pr={6} mb={4}>
-            <Text as="p">In the meantime, please find me here:</Text>
-          </Box>
-          <Box width={[1, 1, 2 / 3]}>
-            <Text as="ul">
-              <li>me@caseykennedy.me</li>
-              <li>dribbble</li>
-              <li>github</li>
-              <li>linkedin</li>
+          <Heading as="h2">
+            The new site is officially 'almost' done — lol. Foreal though, it's
+            almost done...
+          </Heading>
+          <Heading as="h1" color={'#ded1bf'}>
+            If you need a blazing fast website designed <em>and</em> developed
+            with all the bells and whistles (react, gatsby, graphQL, headless
+            CMS, animations, SEO), a cutting-edge e-commerce experience
+            (shopify, stripe, CRM), or a shiny new visual identity (logo,
+            packaging, voice+tone), then I’m your man.
+          </Heading>
+          <Flex flexWrap="wrap" justifyContent="space-between">
+            <Text as="p" mb={0}>
+              Get in touch with{' '}
+              <a href="mailto:me@caseykennedy.me" className="js-hover">me@caseykennedy.me</a>
             </Text>
-          </Box>
+            <Text as="p" mb={0}>
+              dribbble github linkedin
+            </Text>
+          </Flex>
         </Flex>
       </Section>
 
-      <Section pt={4} pb={4} bg="darkslategray" color="white">
-        <Text as="span" fontSize={3} style={{ textTransform: 'uppercase' }}>
-          Let's build a blazing fast website! Let's build a blazing fast
-          website!
-        </Text>
-      </Section>
+      {/* <Section width={1/2} bg="antiquewhite">
+          <Flex flexWrap="wrap">
+            <Box width={[1, 1, 1 / 3]} pr={6} mb={4}>
+              <Text as="p">In the meantime, please find me here:</Text>
+            </Box>
+            <Box width={[1, 1, 2 / 3]}>
+              <Text as="ul">
+                <li>me@caseykennedy.me</li>
+                <li>dribbble</li>
+                <li>github</li>
+                <li>linkedin</li>
+              </Text>
+            </Box>
+          </Flex>
+        </Section> */}
 
-      {/* <Section pt={0} pb={4}>
+      <Flex justifyContent="space-between" flexDirection="column">
+        {/* <Section pt={4} pb={4} bg="darkslategray" color="white">
+          <Text as="span" fontSize={3} style={{ textTransform: 'uppercase' }}>
+            If you need a blazing fast website designed and developed with all
+            the bells and whistles (react, gatsby, graphQL, headless CMS,
+            animations), a cutting-edge e-commerce experience (shopify, stripe,
+            CRM), or a shiny new visual identity (logo, packaging,
+            voice+tone), then I’m your man.
+          </Text>
+        </Section> */}
+
+        {/* <Section pt={0} pb={4}>
         <AnimatedBox width={1} mt={'10vh'} style={DelayedFade}>
           <Heading as="h2" fontSize={[4, 5, 6]} mb={0}>
             Welcome
@@ -140,7 +164,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Box>
       </Section> */}
 
-      {/* <Section>
+        {/* <Section>
         <Flex width={1} justifyContent="flex-end" alignItems="flex-end">
           <Box as="figure" width={[4 / 12]} mb={-7}>
             <ImageHover
@@ -160,7 +184,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Flex>
       </Section> */}
 
-      {/* <Section>
+        {/* <Section>
         <Flex
           width={1}
           flexDirection="column"
@@ -174,7 +198,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Flex>
       </Section> */}
 
-      {/* <Section>
+        {/* <Section>
         <Box width={1}>
           <Heading
             as="h2"
@@ -188,7 +212,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Box>
       </Section> */}
 
-      {/* <Section pt={0}>
+        {/* <Section pt={0}>
         <Flex alignItems="flex-end">
           <Box as="figure" width={[7 / 12]}>
             <ImageHover
@@ -211,7 +235,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Flex>
       </Section> */}
 
-      {/* <Section>
+        {/* <Section>
         <Box width={1 / 2}>
           <Heading as="p">{pageContext.testimonial.quote}</Heading>
           <Text as="p" mb={0}>
@@ -223,7 +247,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         </Box>
       </Section> */}
 
-      {/* <Section pt={0} pb={0}>
+        {/* <Section pt={0} pb={0}>
         <Box width={7 / 12}>
           <Text as="p" fontSize={4} mt={7}>
             <a href="mailto:me@caseykennedy.me" className="t--link  js-hover">
@@ -232,7 +256,8 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
           </Text>
         </Box>
       </Section> */}
-    </Flex>
+      </Flex>
+    </>
   )
 }
 

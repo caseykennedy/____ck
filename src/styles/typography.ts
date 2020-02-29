@@ -128,7 +128,7 @@ const Typography = css`
     font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
-    margin: 0 0 1.25em;
+    margin: 0 0 0.8em;
     transition: ${theme.transition.all};
   }
 
