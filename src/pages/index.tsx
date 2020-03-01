@@ -121,17 +121,17 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
           </Flex>
           <Flex flexWrap="wrap" justifyContent="space-between">
             <Text as="p" fontSize={[3, 4, 5]} mb={0}>
-              <a href="//dribbble.com/caseykennedy" className="t--link js-hover">
+              <a href="//dribbble.com/caseykennedy" target="_blank" className="t--link js-hover">
                 dribbble
               </a>
             </Text>
             <Text as="p" fontSize={[3, 4, 5]} mb={0}>
-              <a href="" className="t--link js-hover">
+              <a href="//github.com/caseykennedy" target="_blank" className="t--link js-hover">
                 github
               </a>
             </Text>
             <Text as="p" fontSize={[3, 4, 5]} mb={0}>
-              <a href="" className="t--link js-hover">
+              <a href="//linkedin.com/in/casey-kennedy-0b123727" target="_blank" className="t--link js-hover">
                 linkedin
               </a>
             </Text>
