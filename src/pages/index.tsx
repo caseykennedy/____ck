@@ -97,8 +97,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             />
           </Heading>
           <Heading as="h2">
-            My new website is getting a footprint gas pedal installed, so I
-            stole this heap...
+            Currently working on a fresh new website that will be live soon...
           </Heading>
           <Heading as="h1" fontSize={[3, 4, 5]}>
             If you need a blazing fast website designed <em>and</em> developed
@@ -115,24 +114,24 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
           <Flex flexWrap="wrap" justifyContent="space-between" mb={6}>
             <Text as="p" fontSize={[3, 4, 5]}>
               <a href="mailto:me@caseykennedy.me" className="t--link js-hover">
-                Email me
+                Email
               </a>{' '}
               or find me on:
             </Text>
           </Flex>
           <Flex flexWrap="wrap" justifyContent="space-between">
             <Text as="p" fontSize={[3, 4, 5]} mb={0}>
-              <a href="//dribbble.com/caseykennedy" target="_blank" className="t--link js-hover">
+              <a href="//dribbble.com/caseykennedy" className="t--link js-hover">
                 dribbble
               </a>
             </Text>
             <Text as="p" fontSize={[3, 4, 5]} mb={0}>
-              <a href="//github.com/caseykennedy" target="_blank" className="t--link js-hover">
+              <a href="" className="t--link js-hover">
                 github
               </a>
             </Text>
             <Text as="p" fontSize={[3, 4, 5]} mb={0}>
-              <a href="//linkedin.com/in/casey-kennedy-0b123727" target="_blank" className="t--link js-hover">
+              <a href="" className="t--link js-hover">
                 linkedin
               </a>
             </Text>
