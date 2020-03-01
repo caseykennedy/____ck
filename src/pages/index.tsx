@@ -81,7 +81,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
   })
   return (
     <>
-      <Section pt={3} pb={3}>
+      <Section pt={3} pb={5}>
         <Flex
           justifyContent="space-between"
           flexDirection="column"
@@ -89,7 +89,7 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
         >
           <Heading as="h2">
             <Scrambler
-              text={'hang tight...'}
+              text={'Hello friends 🖖'}
               characters={'+-'}
               duration={1000}
               renderIn={1000}
@@ -97,23 +97,44 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             />
           </Heading>
           <Heading as="h2">
-            The new site is officially 'almost' done — lol. Foreal though, it's
-            almost done...
+            My new website is getting a footprint gas pedal installed, so I
+            stole this heap...
           </Heading>
-          <Heading as="h1" color={'#ded1bf'}>
+          <Heading as="h1" fontSize={[3, 4, 5]}>
             If you need a blazing fast website designed <em>and</em> developed
             with all the bells and whistles (react, gatsby, graphQL, headless
-            CMS, animations, SEO), a cutting-edge e-commerce experience
-            (shopify, stripe, CRM), or a shiny new visual identity (logo,
-            packaging, voice+tone), then I’m your man.
+            CMS, animations, SEO, accessibility), a high-conversion e-commerce
+            experience (shopify, stripe, CRM), or a shiny new visual identity
+            (logo, packaging, implementations), then I’m your man.
           </Heading>
-          <Flex flexWrap="wrap" justifyContent="space-between">
-            <Text as="p" mb={0}>
-              Get in touch with{' '}
-              <a href="mailto:me@caseykennedy.me" className="js-hover">me@caseykennedy.me</a>
+          {/* <Text as="p" fontSize={[3, 4, 5]}>
+            I offer a wide range of services, but visual design, developing
+            websites, and building cutting-edge e-commerce systems is my
+            JAMstack :)
+          </Text> */}
+          <Flex flexWrap="wrap" justifyContent="space-between" mb={6}>
+            <Text as="p" fontSize={[3, 4, 5]}>
+              <a href="mailto:me@caseykennedy.me" className="t--link js-hover">
+                Email me
+              </a>{' '}
+              or find me on:
             </Text>
-            <Text as="p" mb={0}>
-              dribbble github linkedin
+          </Flex>
+          <Flex flexWrap="wrap" justifyContent="space-between">
+            <Text as="p" fontSize={[3, 4, 5]} mb={0}>
+              <a href="//dribbble.com/caseykennedy" target="_blank" className="t--link js-hover">
+                dribbble
+              </a>
+            </Text>
+            <Text as="p" fontSize={[3, 4, 5]} mb={0}>
+              <a href="//github.com/caseykennedy" target="_blank" className="t--link js-hover">
+                github
+              </a>
+            </Text>
+            <Text as="p" fontSize={[3, 4, 5]} mb={0}>
+              <a href="//linkedin.com/in/casey-kennedy-0b123727" target="_blank" className="t--link js-hover">
+                linkedin
+              </a>
             </Text>
           </Flex>
         </Flex>
@@ -134,129 +155,6 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
             </Box>
           </Flex>
         </Section> */}
-
-      <Flex justifyContent="space-between" flexDirection="column">
-        {/* <Section pt={4} pb={4} bg="darkslategray" color="white">
-          <Text as="span" fontSize={3} style={{ textTransform: 'uppercase' }}>
-            If you need a blazing fast website designed and developed with all
-            the bells and whistles (react, gatsby, graphQL, headless CMS,
-            animations), a cutting-edge e-commerce experience (shopify, stripe,
-            CRM), or a shiny new visual identity (logo, packaging,
-            voice+tone), then I’m your man.
-          </Text>
-        </Section> */}
-
-        {/* <Section pt={0} pb={4}>
-        <AnimatedBox width={1} mt={'10vh'} style={DelayedFade}>
-          <Heading as="h2" fontSize={[4, 5, 6]} mb={0}>
-            Welcome
-          </Heading>
-        </AnimatedBox>
-        <Box width={1} mb={'10vh'}>
-          <Heading as="h2" fontSize={[4, 5, 6]} textAlign="right" mb={0}>
-            <Cycler
-              duration={9000}
-              strings={scrambleStrings}
-              characters={'+-'}
-              changeFrom={'+--+-'}
-            />
-          </Heading>
-        </Box>
-      </Section> */}
-
-        {/* <Section>
-        <Flex width={1} justifyContent="flex-end" alignItems="flex-end">
-          <Box as="figure" width={[4 / 12]} mb={-7}>
-            <ImageHover
-              title={pageContext.logofolio.title}
-              subTitle={pageContext.logofolio.years}
-              link="/projects/#logofolio"
-              src="unsplash--007.jpg"
-              altText="core37 logo design portfolio"
-            />
-          </Box>
-          <Box width={8 / 12}>
-            <Text as="p" fontSize={2}>
-              {pageContext.projects.title}
-            </Text>
-            <ProjectSlider slides={projectData} />
-          </Box>
-        </Flex>
-      </Section> */}
-
-        {/* <Section>
-        <Flex
-          width={1}
-          flexDirection="column"
-          justifyContent="flex-end"
-          alignItems="flex-end"
-          textAlign="right"
-        >
-          <Box width={[10 / 12, 9 / 12, 9 / 12]}>
-            <Heading as="h3" className="t--dual-col">{pageContext.about.detail}</Heading>
-          </Box>
-        </Flex>
-      </Section> */}
-
-        {/* <Section>
-        <Box width={1}>
-          <Heading
-            as="h2"
-            dangerouslySetInnerHTML={{ __html: pageContext.about.title }}
-          />
-          <Text as="p">
-            <Link to={pageContext.about.link} className="t--link  js-hover">
-              {pageContext.about.cta}
-            </Link>
-          </Text>
-        </Box>
-      </Section> */}
-
-        {/* <Section pt={0}>
-        <Flex alignItems="flex-end">
-          <Box as="figure" width={[7 / 12]}>
-            <ImageHover
-              title={pageContext.dribbble.title}
-              subTitle={pageContext.dribbble.years}
-              link="/projects/#dribbbles"
-              src="dribbble--01.jpg"
-              altText="core37 posters design showcase"
-            />
-          </Box>
-          <Box as="figure" width={[5 / 12]} mb={-7}>
-            <ImageHover
-              title={pageContext.posters.title}
-              subTitle={pageContext.posters.years}
-              link="/projects/#posters"
-              src="unsplash--007.jpg"
-              altText="core37 posters design showcase"
-            />
-          </Box>
-        </Flex>
-      </Section> */}
-
-        {/* <Section>
-        <Box width={1 / 2}>
-          <Heading as="p">{pageContext.testimonial.quote}</Heading>
-          <Text as="p" mb={0}>
-            {pageContext.testimonial.author}
-          </Text>
-          <Text as="p" color="tertiary">
-            {pageContext.testimonial.company}
-          </Text>
-        </Box>
-      </Section> */}
-
-        {/* <Section pt={0} pb={0}>
-        <Box width={7 / 12}>
-          <Text as="p" fontSize={4} mt={7}>
-            <a href="mailto:me@caseykennedy.me" className="t--link  js-hover">
-              {pageContext.contact.cta}
-            </a>
-          </Text>
-        </Box>
-      </Section> */}
-      </Flex>
     </>
   )
 }

@@ -143,7 +143,7 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.lg} / 1.5);
+    font-size: calc(${theme.root.font.lg});
     line-height: calc(${theme.root.font.headingLineHeight} / 1);
 
     @media ${theme.mq.medium} {
@@ -188,7 +188,7 @@ const Typography = css`
   p {
     font-size: ${theme.fontSizes[2]};
     line-height: ${theme.root.font.bodyLineHeight};
-    margin-bottom: 1.25em;
+    margin-bottom: 0.8em;
 
     &:last-child {
       margin-bottom: 0;
@@ -204,7 +204,7 @@ const Typography = css`
   }
 
   a {
-    color: ${theme.colors.text};
+    color: ${theme.colors.secondary};
     text-decoration: none;
     position: relative;
     z-index: 1;
@@ -220,11 +220,11 @@ const Typography = css`
   .t--link {
     position: relative;
 
-    &::after {
+    &::before {
       content: '';
-      background: ${theme.colors.white};
+      background: ${theme.colors.secondary};
       width: 0;
-      height: 125%;
+      height: 6px;
 
       position: absolute;
       top: 0;
@@ -237,8 +237,8 @@ const Typography = css`
     }
 
     &:hover {
-      &::after {
-        /* width: 100%; */
+      &::before {
+        width: 100%;
       }
     }
 

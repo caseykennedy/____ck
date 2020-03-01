@@ -74,15 +74,15 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
-    body: '#000000',
-    text: 'darkslategray',
-    background: 'antiquewhite',
+    body: 'ivory',
+    text: 'ivory',
+    background: 'black',
     
-    primary: '#ffffff',
-    secondary: '#444444',
+    primary: 'gainsboro',
+    secondary: 'goldenrod',
     tertiary: '#999999',
 
-    accent: 'darkslategray',
+    accent: 'goldenrod',
 
     black: '#000000',
     white: '#ffffff',
