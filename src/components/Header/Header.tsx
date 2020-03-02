@@ -72,12 +72,11 @@ const Header: React.FC<Props> = ({ navData, mainRef }) => {
       <S.Header as="header" style={DelayedFade}>
         <S.HeaderInner>
           <S.Logo>
-            <Link to="/" className="js-hover" aria-label="core37, back to home">
-              {/* <Logo /> */}
+            {/* <Link to="/" className="js-hover" aria-label="core37, back to home">
               <Text>
                 ck
               </Text>
-            </Link>
+            </Link> */}
           </S.Logo>
           <S.Nav>
             <S.Toggle

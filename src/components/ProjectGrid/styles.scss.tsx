@@ -17,7 +17,7 @@ import { Box, Flex } from '../../elements'
 export const ProjectGrid = styled(Box)`
   .project-grid__item {
     &:nth-child(even) {
-      margin-top: ${theme.space[7]};
+      /* margin-top: ${theme.space[7]}; */
     }
 
     a {

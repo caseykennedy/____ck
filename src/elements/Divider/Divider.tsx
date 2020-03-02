@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { Box } from 'rebass'
+import theme from '../../../config/theme'
 
 type Props = {
-  bg: any
-  py: any
+  bg?: any
+  py?: any
 }
 
 const Divider: React.FC<Props> = ({ bg, py }) => (
@@ -11,7 +12,7 @@ const Divider: React.FC<Props> = ({ bg, py }) => (
 )
 
 Divider.defaultProps = {
-  bg: 'black',
+  bg: theme.colors.background,
   py: 0
 }
 

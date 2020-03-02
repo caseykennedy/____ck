@@ -5,81 +5,24 @@
 import { css } from 'styled-components'
 import theme from '../../config/theme'
 
-// Aeonik Regular
-import AeonikRegularEot from './fonts/AeonikRegular.eot'
-import AeonikRegularWoff2 from './fonts/AeonikRegular.woff2'
-import AeonikRegularWoff from './fonts/AeonikRegular.woff'
-import AeonikRegularOtf from './fonts/AeonikRegular.otf'
-
-// Aeonik Light
-import AeonikLightEot from './fonts/AeonikLight.eot'
-import AeonikLightWoff2 from './fonts/AeonikLight.woff2'
-import AeonikLightWoff from './fonts/AeonikLight.woff'
-import AeonikLightOtf from './fonts/AeonikLight.otf'
-
-// Aeonik Bold
-import AeonikBoldEot from './fonts/AeonikBold.eot'
-import AeonikBoldWoff2 from './fonts/AeonikBold.woff2'
-import AeonikBoldWoff from './fonts/AeonikBold.woff'
-import AeonikBoldOtf from './fonts/AeonikBold.otf'
-
-// Aeonik Black
-import AeonikBlackEot from './fonts/AeonikBlack.eot'
-import AeonikBlackWoff2 from './fonts/AeonikBlack.woff2'
-import AeonikBlackWoff from './fonts/AeonikBlack.woff'
-import AeonikBlackOtf from './fonts/AeonikBlack.otf'
+// BC Falster Grotesk Regular
+import FalsterGroteskEot from './fonts/BCFalsterGrotesk-Regular.eot'
+import FalsterGroteskWoff2 from './fonts/BCFalsterGrotesk-Regular.woff2'
+import FalsterGroteskWoff from './fonts/BCFalsterGrotesk-Regular.woff'
+import FalsterGroteskOtf from './fonts/BCFalsterGrotesk-Regular.otf'
 
 // ___________________________________________________________________
 
 const Typography = css`
   /* Aeonik Regular */
   @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikRegularEot});
-    src: url(${AeonikRegularWoff2}) format('woff2'),
-      url(${AeonikRegularWoff}) format('woff'),
-      url(${AeonikRegularOtf}) format('opentype'),
-      url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'Falster';
+    src: url(${FalsterGroteskEot});
+    src: url(${FalsterGroteskWoff2}) format('woff2'),
+      url(${FalsterGroteskWoff}) format('woff'),
+      url(${FalsterGroteskOtf}) format('opentype'),
+      url(${FalsterGroteskEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-  
-  /* Aeonik Light */
-  @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikLightEot});
-    src: url(${AeonikLightWoff2}) format('woff2'),
-      url(${AeonikLightWoff}) format('woff'),
-      url(${AeonikLightOtf}) format('opentype'),
-      url(${AeonikLightEot}?#iefix) format('embedded-opentype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* Aeonik Bold */
-  @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikBoldEot});
-    src: url(${AeonikBoldWoff2}) format('woff2'),
-      url(${AeonikBoldWoff}) format('woff'),
-      url(${AeonikBoldOtf}) format('opentype'),
-      url(${AeonikBoldEot}?#iefix) format('embedded-opentype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* Aeonik Black */
-  @font-face {
-    font-family: 'Aeonik';
-    src: url(${AeonikBlackEot});
-    src: url(${AeonikBlackWoff2}) format('woff2'),
-      url(${AeonikBlackWoff}) format('woff'),
-      url(${AeonikBlackOtf}) format('opentype'),
-      url(${AeonikBlackEot}?#iefix) format('embedded-opentype');
-    font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
@@ -128,7 +71,7 @@ const Typography = css`
     font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
-    margin: 0 0 0.8em;
+    margin: 0 0 0.6em;
     transition: ${theme.transition.all};
   }
 
@@ -143,11 +86,11 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.lg});
+    font-size: calc(${theme.root.font.xl});
     line-height: calc(${theme.root.font.headingLineHeight} / 1);
 
     @media ${theme.mq.medium} {
-      font-size: ${theme.root.font.xl};
+      font-size: ${theme.root.font.xxl};
     }
   }
 
@@ -204,7 +147,7 @@ const Typography = css`
   }
 
   a {
-    color: ${theme.colors.secondary};
+    color: ${theme.colors.accent};
     text-decoration: none;
     position: relative;
     z-index: 1;
@@ -236,11 +179,11 @@ const Typography = css`
       transition: width 0.222s ease-in-out;
     }
 
-    &:hover {
+    /* &:hover {
       &::before {
         width: 100%;
       }
-    }
+    } */
 
     &:active {
       &::after {

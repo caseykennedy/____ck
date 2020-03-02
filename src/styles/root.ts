@@ -38,7 +38,7 @@ const RootVariables = css`
 
     /* line-height */
     --heading-line-height: 1;
-    --body-line-height: 1;
+    --body-line-height: 1.1;
   }
 
   @media ${theme.mq.medium} {

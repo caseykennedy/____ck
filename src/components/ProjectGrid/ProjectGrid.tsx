@@ -47,11 +47,7 @@ const GridItem: React.FC<SlideShape> = ({ slide }) => {
   return (
     <Cell key={slide.id} className="project-grid__item">
       <Link to={slide.slug} className="js-hover">
-        <AnimatedBox
-          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-          onMouseLeave={() => set({ xys: [0, 0, 1] })}
-          style={{ transform: props.xys.interpolate(trans) }}
-        >
+        <AnimatedBox>
           <Img
             alt={slide.title_detail}
             key={slide.cover.childImageSharp.fluid.src}
@@ -60,12 +56,11 @@ const GridItem: React.FC<SlideShape> = ({ slide }) => {
           />
         </AnimatedBox>
         <Box pt={3}>
-          <Text as="p" fontSize={2} mb={0}>
+          <Text as="p" mb={0}>
             {slide.title}
           </Text>
           <Text
             as="p"
-            fontSize={2}
             color="tertiary"
             className="project-services"
           >
@@ -87,7 +82,7 @@ const GridItem: React.FC<SlideShape> = ({ slide }) => {
 const ProjectGrid: React.FC<ProjectShape> = ({ projectData }) => {
   return (
     <S.ProjectGrid width={1}>
-      <Grid columns={2} gap="0">
+      <Grid columns={1} gap="0">
         {projectData.map(({ node: slide }) => (
           <GridItem key={slide.id} slide={slide} />
         ))}

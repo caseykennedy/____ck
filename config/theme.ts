@@ -74,12 +74,11 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   colors: {
-    body: 'ivory',
-    text: 'ivory',
-    background: 'black',
+    text: 'black',
+    background: 'gainsboro',
     
-    primary: 'gainsboro',
-    secondary: 'goldenrod',
+    primary: 'goldenrod',
+    secondary: 'black',
     tertiary: '#999999',
 
     accent: 'goldenrod',
@@ -114,8 +113,8 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"Aeonik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    heading: `"Aeonik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    body: `"Falster", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"Falster", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     code: `"Menlo", Consolas, "Liberation Mono", Menlo, Courier, monospace`
   },
 
@@ -163,7 +162,7 @@ const theme: ThemeShape = {
 
   transform: {
     matrix: {
-      from: 'matrix(1, 0, 0, 1, 32, 32)',
+      from: 'matrix(1, 0, 0, 1, 16, 16)',
       to: 'matrix(1, 0, 0, 1, 0, 0)'
     }
   },
