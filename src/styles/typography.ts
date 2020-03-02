@@ -34,7 +34,7 @@ const Typography = css`
 
   ::selection {
     color: ${theme.colors.white};
-    background-color: ${theme.colors.accent};
+    background-color: ${theme.colors.primary};
   }
 
   html {

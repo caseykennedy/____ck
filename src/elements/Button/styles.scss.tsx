@@ -16,13 +16,13 @@ import { Btn } from '../../elements'
 // ___________________________________________________________________
 
 export const ButtonStyles = styled(Btn)`
-  background: ${theme.colors.accent};
+  background: ${theme.colors.primary};
   color: ${theme.colors.white};
   transition: ${theme.transition.all};
 
   &:hover {
     background: ${theme.colors.secondary};
-    color: ${lighten(0.1, `${theme.colors.accent}`)};
+    color: ${lighten(0.1, `${theme.colors.primary}`)};
   }
 `
 

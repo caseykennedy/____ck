@@ -20,9 +20,9 @@ type Props = {
   bg?: string
   color?: string
   pt?: number | number[] | string
+  pb?: number | number[] | string
   pr?: number | number[] | string
   pl?: number | number[] | string
-  pb?: number | number[] | string
   id?: string
   width?: number | number[] | string | string[]
   height?: string
@@ -33,9 +33,9 @@ const Section: React.FC<Props> = ({
   bg,
   color,
   pt,
+  pb,
   pr,
   pl,
-  pb,
   id,
   width,
   height
@@ -68,10 +68,10 @@ export default Section
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [3],
+  pt: [6],
+  pb: [6],
   pr: theme.gutter,
   pl: theme.gutter,
-  pb: [3],
   width: 1,
   height: 'inherit'
 }

@@ -50,8 +50,13 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
   })
   return (
     <>
-      <Section height="80vh" pt={8} pb={3}>
-        <Flex flexDirection="column">
+      <Section pt={3} pb={3}>
+        <Flex
+          flexDirection="column"
+          justifyContent="flex-start"
+          width={2 / 3}
+          style={{ height: '70vh' }}
+        >
           {/* <Heading as="h1">
             <Scrambler
               text={'Hello visitor'}
@@ -61,7 +66,7 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
               changeFrom={'abcdefghijk'}
             />
           </Heading> */}
-          <Heading as="h2">
+          <Heading as="h3">
             I run a small design and development practice helping brands define
             and develop visual identity systems and cutting-edge digital
             experiences.
@@ -80,12 +85,12 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
         </Flex>
       </Section>
       <Section>
-        <Box width={[1 / 2]}>
+        <Box width={[2 / 3]}>
           <ProjectGrid projectData={projectData} />
         </Box>
       </Section>
       <Section>
-        <Box width={[1 / 2]}>
+        <Box width={[2 / 3]}>
           <Heading as="h3">
             I believe that a well defined strategy wins every time. My process
             includes 3 core phases; research, definition and implementation.

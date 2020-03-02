@@ -81,8 +81,6 @@ const theme: ThemeShape = {
     secondary: 'black',
     tertiary: 'gray',
 
-    accent: 'gray',
-
     black: '#000000',
     white: '#ffffff',
   },
