@@ -14,13 +14,13 @@ export const Cursor = styled.span`
   z-index: 11000;
 
   position: fixed;
-  top: -16px;
-  left: -16px;
-  width: 64px;
-  height: 64px;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
 
   background-color: ${theme.colors.primary};
-  border: 6px solid ${theme.colors.primary};
+  /* border: 6px solid ${theme.colors.primary}; */
   border-radius: 50%;
 
   transform: translate3d(var(--mouse-x), var(--mouse-y), 0);

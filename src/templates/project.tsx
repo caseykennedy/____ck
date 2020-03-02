@@ -107,7 +107,7 @@ const Project: React.FC<Props> = ({
       <AnimatedBox style={pageAnimation}>
         <Section pt={2} pb={3}>
           <Box width={1}>
-            <Heading as="h1">{project.desc}</Heading>
+            <Heading as="h2">{project.desc}</Heading>
             <Heading as="h4">○ {project.title}</Heading>
 
             <Heading as="h4" textAlign="right">

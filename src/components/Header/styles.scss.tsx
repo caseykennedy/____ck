@@ -56,8 +56,8 @@ export const Logo = styled(Box)`
   } */
 
   a {
-    mix-blend-mode: difference;
     display: flex;
+    color: ${theme.colors.text};
 
     svg {
       mix-blend-mode: difference;
@@ -99,16 +99,16 @@ export const Toggle = styled.div`
   font-size: calc(${theme.fontSizes[2]});
   font-weight: 400;
 
-  &::after {
+  /* &::after {
     content: '';
     position: relative;
     background: transparent;
-  }
+  } */
 
-  @media ${theme.mq.medium} {
+  /* @media ${theme.mq.medium} {
     transform-origin: 5px 5px;
     width: ${theme.space[6]};
-  }
+  } */
 `
 
 // ___________________________________________________________________

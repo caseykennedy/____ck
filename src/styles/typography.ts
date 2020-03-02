@@ -147,7 +147,6 @@ const Typography = css`
   }
 
   a {
-    color: ${theme.colors.accent};
     text-decoration: none;
     position: relative;
     z-index: 1;

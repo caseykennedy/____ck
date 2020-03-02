@@ -46,7 +46,7 @@ const Footer: React.FC<Props> = ({ navData }) => {
           alignItems="flex-start"
           justifyContent="space-between"
         >
-          <Text>&copy;{Year()}</Text>
+          <Text>Find me on:</Text>
           {navData.map(({ node: item }) => (
             <Link to={item.link} key={item.name} className="t--link  js-hover">
               {item.name}

@@ -72,11 +72,11 @@ const Header: React.FC<Props> = ({ navData, mainRef }) => {
       <S.Header as="header" style={DelayedFade}>
         <S.HeaderInner>
           <S.Logo>
-            {/* <Link to="/" className="js-hover" aria-label="core37, back to home">
+            <Link to="/" className="js-hover" aria-label="core37, back to home">
               <Text>
                 ck
               </Text>
-            </Link> */}
+            </Link>
           </S.Logo>
           <S.Nav>
             <S.Toggle
@@ -85,7 +85,7 @@ const Header: React.FC<Props> = ({ navData, mainRef }) => {
               aria-label="toggle menu"
             >
               <Scrambler
-                text={!isNavOpen ? 'tl;dr' : 'close'}
+                text={!isNavOpen ? 'info' : 'close'}
                 characters={'+-'}
                 duration={500}
                 renderIn={500}

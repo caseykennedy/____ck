@@ -50,12 +50,8 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
   })
   return (
     <>
-      <Section pt={3} pb={5}>
-        <Flex
-          justifyContent="space-between"
-          flexDirection="column"
-          width={'50vw'}
-        >
+      <Section height="80vh" pt={8} pb={3}>
+        <Flex flexDirection="column">
           {/* <Heading as="h1">
             <Scrambler
               text={'Hello visitor'}
@@ -65,7 +61,7 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
               changeFrom={'abcdefghijk'}
             />
           </Heading> */}
-          <Heading as="h3">
+          <Heading as="h2">
             I run a small design and development practice helping brands define
             and develop visual identity systems and cutting-edge digital
             experiences.
@@ -76,21 +72,11 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
             with startups, established brands and anyone with a great idea —
             advising on visual identity, technical strategy and digital tooling.
           </Text>
-          {/* <Text as="p">
+          <Text as="p">
             I think of clients as patners and don't typically get hired for
             one-off projects. My aim is to collaboerate with my partners and,
             over time, build lasting brands and digital experiences.
           </Text>
-          <Text as="p">
-            I believe that a well defined strategy wins every time. My process
-            includes 3 core phases; research, definition and implementation.
-            Every project is approached with a clear and open mindset with the
-            intention to add value.
-          </Text>
-          <Text as="p">
-            Finding balance among simplicity, form and function in my work and
-            sharing gratitude with those I collaborate with is my goal.
-          </Text> */}
         </Flex>
       </Section>
       <Section>
@@ -99,6 +85,21 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
         </Box>
       </Section>
       <Section>
+        <Box width={[1 / 2]}>
+          <Heading as="h3">
+            I believe that a well defined strategy wins every time. My process
+            includes 3 core phases; research, definition and implementation.
+            Every project is approached with a clear and open mindset with the
+            intention to add value.
+          </Heading>
+          <Text as="p">
+            Finding balance among simplicity, form and function in my work and
+            sharing gratitude with those I collaborate with is my goal.
+          </Text>
+        </Box>
+      </Section>
+      <Section>
+        <Heading as="h3">dribbbles</Heading>
         <Box width={[1]}>
           <DribbbleGrid />
         </Box>
@@ -112,10 +113,14 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
           (logo, packaging, implementations), then I’m your man.
         </Heading>
         <Text fontSize={4} mt={6}>
-          Contact{' '}
           <a href="mailto:me@caseykennedy.me" className="js-hover">
-            me@caseykennedy.me
+            Email me
           </a>
+        </Text>
+        <Text as="p">
+          For larger projects I work with a collective over at core37. We offer
+          a wide-range of brand and digital services utilizing our network of
+          peers to get the job done fast and right.
         </Text>
       </Section>
       <Section pt={0}>
@@ -136,17 +141,18 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
               Capabilities
             </Text>
             <Text mb={2}>logo identity</Text>
-            <Text mb={3}>brand guidelines</Text>
+            <Text mb={2}>brand guidelines</Text>
             <Text mb={2}>packaging</Text>
-            <Text mb={4}>implementations</Text>
+            <Text mb={2}>implementations</Text>
+            <Text mb={2}>editorial design</Text>
             <Text mb={2}>sound design</Text>
-            <Text mb={6}>wayfinding</Text>
-            <Text mb={4}>visual design</Text>
+            <Text mb={2}>wayfinding</Text>
+            <Text mb={2}>visual design</Text>
             <Text mb={2}>UI &amp; UX</Text>
-            <Text mb={4}>prototyping</Text>
+            <Text mb={2}>prototyping</Text>
             <Text mb={2}>web development</Text>
-            <Text mb={2}>Design systems</Text>
-            <Text mb={5}>ecommerce</Text>
+            <Text mb={2}>design systems</Text>
+            <Text mb={2}>ecommerce</Text>
             <Text mb={2}>ongoing support</Text>
           </Box>
           <Box width={[1 / 6]} mr={3}>
@@ -154,11 +160,11 @@ const IndexPageComp: React.FC<PageShape> = ({ projectData }) => {
               Tech
             </Text>
             <Text mb={2}>Javascript</Text>
-            <Text mb={5}>HTML+CSS</Text>
+            <Text mb={2}>HTML+CSS</Text>
             <Text mb={2}>React</Text>
             <Text mb={2}>Gatsby / Next</Text>
-            <Text mb={6}>Typescript</Text>
-            <Text mb={4}>Shopify, Stripe</Text>
+            <Text mb={2}>Typescript</Text>
+            <Text mb={2}>Shopify, Stripe</Text>
             <Text mb={2}>Wordpress</Text>
           </Box>
           {/* <Box width={[1 / 6]} mr={3}>

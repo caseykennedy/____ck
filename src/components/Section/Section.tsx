@@ -21,9 +21,11 @@ type Props = {
   color?: string
   pt?: number | number[] | string
   pr?: number | number[] | string
+  pl?: number | number[] | string
   pb?: number | number[] | string
   id?: string
   width?: number | number[] | string | string[]
+  height?: string
 }
 
 const Section: React.FC<Props> = ({
@@ -32,16 +34,27 @@ const Section: React.FC<Props> = ({
   color,
   pt,
   pr,
+  pl,
   pb,
   id,
-  width
+  width,
+  height
 }) => (
-  <Box as="section" bg={bg} color={color} pt={pt} pb={pb} id={id} width={width}>
+  <Box
+    as="section"
+    bg={bg}
+    color={color}
+    pt={pt}
+    pb={pb}
+    id={id}
+    width={width}
+    style={{ height: `${height}` }}
+  >
     <Box
       width={1}
       // maxWidth={theme.maxWidth}
       pr={pr}
-      pl={3}
+      pl={pl}
       m="0 auto"
     >
       {children}
@@ -55,10 +68,12 @@ export default Section
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [6, 7, 8],
+  pt: [3],
   pr: theme.gutter,
-  pb: [6, 7, 8],
-  width: 1
+  pl: theme.gutter,
+  pb: [3],
+  width: 1,
+  height: 'inherit'
 }
 
 Section.defaultProps = defaultProps

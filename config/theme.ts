@@ -77,11 +77,11 @@ const theme: ThemeShape = {
     text: 'black',
     background: 'gainsboro',
     
-    primary: 'goldenrod',
+    primary: 'gray',
     secondary: 'black',
-    tertiary: '#999999',
+    tertiary: 'gray',
 
-    accent: 'goldenrod',
+    accent: 'gray',
 
     black: '#000000',
     white: '#ffffff',
