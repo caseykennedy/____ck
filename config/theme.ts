@@ -96,13 +96,14 @@ const theme: ThemeShape = {
     '1rem',       // 3
     '1.5rem',     // 4
     '2rem',       // 5
-    '4rem',       // 6
-    '8rem',       // 7
-    '10rem',      // 8
-    '12rem',      // 9
-    '14rem',      // 10
-    '16rem',      // 11
-    '18rem'       // 12
+    '3rem',       // 6
+    '4rem',       // 7
+    '8rem',       // 8
+    '10rem',      // 9
+    '12rem',      // 10
+    '14rem',      // 11
+    '16rem',      // 12
+    '18rem'       // 13
   ],
 
   // Main section x-axis gutter

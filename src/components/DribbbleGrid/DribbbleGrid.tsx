@@ -97,7 +97,7 @@ const DribbbleGrid: React.FC = () => {
   const dribbbles = data.content.edges
   return (
     <S.DribbbleGrid width={1}>
-      <Grid columns={3} gap={'0'}>
+      <Grid columns={3} gap={theme.grid.gap}>
         {dribbbles.map(({ node: drib }) => (
           <Cell key={drib.id}>
             <DribItem item={drib} />

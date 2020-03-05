@@ -24,7 +24,7 @@ const RootVariables = css`
 
     /* set base values */
     --text-base-size: 1em;
-    --text-scale-ratio: 1.618;
+    --text-scale-ratio: 1.8;
     --text-base-letter-spacing: -0.5px;
 
     /* type scale */

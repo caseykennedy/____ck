@@ -9,7 +9,7 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 export const Cursor = styled.span`
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   pointer-events: none;
   z-index: 11000;
 

@@ -74,7 +74,7 @@ const Typography = css`
     margin: 0 0 0.2em;
     transition: ${theme.transition.all};
 
-    text-indent: 3rem;
+    text-indent: 5rem;
     text-align: justify;
     text-justify: inter-word;
   }

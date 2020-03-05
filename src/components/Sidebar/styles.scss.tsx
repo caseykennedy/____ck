@@ -81,7 +81,14 @@ export const Nav = styled.nav`
   display: inherit;
   flex-wrap: nowrap;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: ${theme.border};
+  padding: 0 ${theme.space[3]} ${theme.space[3]} ${theme.space[3]};
+  margin: 0 -${theme.space[3]};
+
+  width: calc(100% + ${theme.space[5]});
 
   a {
     text-decoration: none;

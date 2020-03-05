@@ -35,6 +35,7 @@ type TeamMateProps = {
   item: {
     name: string
     id: number
+    src: string
   }
 }
 
@@ -50,12 +51,10 @@ const TeamMate = ({ item }: TeamMateProps) => {
   return (
     // @ts-ignore: Unreachable code error
     <div ref={hoverRef} style={{ position: 'relative' }}>
-      <Accordion title={item.name} {...AccordionProps}>
-        <Box pt={6} pb={2} pr={7}>
-          <Text as="p">{item.name}</Text>
-        </Box>
-      </Accordion>
-      <Box width="460px" p={6} className={`popup  ${isHovered ? 'show' : ''}`}>
+      <Box my={4} style={{ borderBottom: '2px solid black' }}>
+        <Text fontSize={[4, 4, 5]}>{item.name}</Text>
+      </Box>
+      <Box width="460px" className={`popup  ${isHovered ? 'show' : ''}`}>
         <ImgMatch src={item.src} altText="core37" />
       </Box>
     </div>
@@ -92,38 +91,12 @@ const IndexPageComp: React.FC = () => {
           </Box>
         </Flex>
       </Section>
-      <Section>
+      <Section pr={0} pl={0}>
         <Box width={[1]}>
           {projectList.map((item, idx) => (
             <TeamMate key={idx} item={item} />
           ))}
-          {/* <Divider bg="black" py="1.5px" />
-          <Heading as="h2" mb={2}>
-            Cannavative
-          </Heading>
-          <Divider bg="black" py="1.5px" />
-          <Heading as="h2" mb={2}>
-            Blackbird
-          </Heading>
-          <Divider bg="black" py="1.5px" />
-          <Heading as="h2" mb={2}>
-            Bottle Barn
-          </Heading>
-          <Divider bg="black" py="1.5px" />
-          <Heading as="h2" mb={2}>
-            Cannavative
-          </Heading>
-          <Divider bg="black" py="1.5px" />
-          <Heading as="h2" mb={2}>
-            Posters 2019
-          </Heading>
-          <Divider bg="black" py="1.5px" />
-          <Heading as="h2" mb={2}>
-            Logofolio
-          </Heading>
-          <Divider bg="black" py="1.5px" /> */}
         </Box>
-        <Box width={[1]}>{/* <ProjectGrid /> */}</Box>
       </Section>
       <Section>
         <Box width={[1]}>
@@ -151,7 +124,7 @@ const IndexPageComp: React.FC = () => {
         </Box>
       </Section>
       <Section>
-        <Heading as="h4">dribbbles</Heading>
+        <Text as="p">dribbbles</Text>
         <Box width={[1]}>
           <DribbbleGrid />
         </Box>
@@ -211,16 +184,26 @@ const projectList = [
   {
     id: 1,
     name: 'blackbird',
-    src: 'unsplash-psyc.jpg'
+    src: 'reading.jpg'
   },
   {
     id: 2,
     name: 'cannavative',
-    src: 'unsplash-psyc.jpg'
+    src: 'drib__neon_4x.png'
   },
   {
     id: 3,
     name: 'logofolio',
-    src: 'unsplash-psyc.jpg'
+    src: 'meeting.jpg'
+  },
+  {
+    id: 4,
+    name: 'posters 2019',
+    src: 'reading.jpg'
+  },
+  {
+    id: 5,
+    name: 'bottle barn',
+    src: 'meeting.jpg'
   }
 ]
