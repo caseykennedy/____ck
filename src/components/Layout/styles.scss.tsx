@@ -34,9 +34,9 @@ export const Main = styled(animated.main)`
 
   width: ${theme.siteWidth};
 
-  /* @media ${theme.mq.medium} {
-    width: calc(100vw - ${theme.sidebarWidth.collapsed});
-  } */
+  @media ${theme.mq.medium} {
+    /* width: calc(100vw - ${theme.sidebarWidth.expanded}); */
+  }
 `
 
 export const Footer = styled.footer<{ color?: string[] }>`

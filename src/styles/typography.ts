@@ -71,8 +71,12 @@ const Typography = css`
     font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
-    margin: 0 0 0.6em;
+    margin: 0 0 0.2em;
     transition: ${theme.transition.all};
+
+    text-indent: 3rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
 
   .text--xxxl {
@@ -144,6 +148,11 @@ const Typography = css`
     @media ${theme.mq.medium} {
       column-count: 2;
     }
+  }
+
+  .t--uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   a {

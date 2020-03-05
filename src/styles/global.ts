@@ -51,8 +51,8 @@ const GlobalStyles = createGlobalStyle`
     pointer-events: none;
     z-index: 99999;
     font-size: 3rem;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    right: 0px;
 
     visibility: hidden;
     opacity: 0;

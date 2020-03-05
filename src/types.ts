@@ -22,9 +22,12 @@ export type ProjectNodeShape = {
   title: string
   slug: string
   desc: string
+  industry: string
+  website: string
   services: string
   color: string
   category: string
+  images: string
   cover: {
     childImageSharp: {
       fluid: {

@@ -11,6 +11,7 @@ import { useSpring } from 'react-spring'
 import useNavigation from '../../hooks/useNavigation'
 
 import Header from '../Header'
+import Sidebar from '../Sidebar'
 import Footer from '../Footer'
 import Cursor from '../Cursor'
 
@@ -68,15 +69,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <GlobalStyles />
       <Cursor />
       <S.Wrapper ref={scrollRef}>
-        {/* <Header mainRef={mainRef} navData={navData} /> */}
+        <Header />
+        <Sidebar mainRef={mainRef} navData={navData} />
         <S.Main
           ref={mainRef}
-          style={{
-            transform: offset.interpolate(calcTranslate)
-          }}
+          // style={{
+          //   transform: offset.interpolate(calcTranslate)
+          // }}
         >
           {children}
-          <Footer navData={navData} />
+          {/* <Footer navData={navData} /> */}
         </S.Main>
       </S.Wrapper>
     </ThemeProvider>

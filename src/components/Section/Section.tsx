@@ -68,8 +68,8 @@ export default Section
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [6],
-  pb: [6],
+  pt: [4, 6, 8],
+  pb: [4, 6, 8],
   pr: theme.gutter,
   pl: theme.gutter,
   width: 1,

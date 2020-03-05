@@ -104,10 +104,10 @@ const Project: React.FC<Props> = ({
         banner={project.cover.childImageSharp.resize.src}
         individual={true}
       />
-      <AnimatedBox style={pageAnimation}>
+      <AnimatedBox style={pageAnimation} width={[1, 1, 7 / 10]}>
         <Section pt={2} pb={3}>
           <Box width={1}>
-            <Heading as="h2">{project.desc}</Heading>
+            <Heading as="h3">{project.desc}</Heading>
             <Heading as="h4">○ {project.title}</Heading>
 
             <Heading as="h4" textAlign="right">
@@ -176,7 +176,7 @@ const Project: React.FC<Props> = ({
           <Box width={1} pl={[0]}>
             <Grid columns={2} gap={theme.grid.gap}>
               {images.edges.map(image => (
-                <Cell key={image.node.childImageSharp.fluid.src}>
+                <Cell key={image.node.name}>
                   <Img
                     alt={image.node.name}
                     fluid={image.node.childImageSharp.fluid}

@@ -19,7 +19,7 @@ export const Cursor = styled.span`
   width: 24px;
   height: 24px;
 
-  background-color: ${theme.colors.primary};
+  background-color: ${theme.colors.black};
   /* border: 6px solid ${theme.colors.primary}; */
   border-radius: 50%;
 

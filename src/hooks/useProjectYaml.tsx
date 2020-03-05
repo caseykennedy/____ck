@@ -19,9 +19,12 @@ const useProjectYaml = () => {
             title
             slug
             desc
+            industry
+            website
             services
             color
             category
+            images
             cover {
               childImageSharp {
                 fluid(quality: 85, maxWidth: 1100) {

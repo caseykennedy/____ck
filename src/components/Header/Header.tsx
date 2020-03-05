@@ -9,13 +9,7 @@ import { Link } from 'gatsby'
 import { useSpring, config } from 'react-spring'
 import { Scrambler } from 'react-text-scrambler'
 
-import useScrollWatch from '../../hooks/useScrollWatch'
-
-import Logo from '../logo'
-import NavLinks from './NavLinks'
-import Overlay from './Overlay'
-
-import { AnimatedBox, Text } from '../../elements'
+import { Heading } from '../../elements'
 
 import theme from '../../../config/theme'
 
@@ -23,79 +17,39 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-type Props = {
-  mainRef: React.RefObject<HTMLDivElement>
-  navData: {
-    node: {
-      name: string
-      link: string
-    }
-  }[]
-}
-
-interface CallbackTypes {
-  callbackData: any
-  previousScrollTop: number
-  currentScrollTop: number
-}
-
-// ___________________________________________________________________
-
-const Header: React.FC<Props> = ({ navData, mainRef }) => {
-  // Navigation toggle
-  const [isNavOpen, setNavOpen] = useState(false)
-  const toggleModal = () => setNavOpen(!isNavOpen)
-
+const Header: React.FC<Props> = () => {
   const DelayedFade = useSpring({
     config: config.molasses,
     delay: 600,
     from: { opacity: 0, transform: theme.transform.matrix.from },
     to: { opacity: 1, transform: theme.transform.matrix.to }
   })
-
   return (
-    <>
-      <Overlay
-        id="nav-root"
-        root="root"
-        isOpen={isNavOpen}
-        handleExit={() => setNavOpen(false)}
-        mainRef={mainRef}
-        className={`nav-bg ${isNavOpen ? 'nav-bg--open' : 'nav-bg--closed'}`}
-      >
-        <NavLinks
-          navData={navData}
-          handleExit={() => setNavOpen(false)}
-          isNavOpen={isNavOpen}
-        />
-      </Overlay>
-      <S.Header as="header" style={DelayedFade}>
-        <S.HeaderInner>
-          <S.Logo>
-            <Link to="/" className="js-hover" aria-label="core37, back to home">
-              <Text>
-                ck
-              </Text>
-            </Link>
-          </S.Logo>
-          <S.Nav>
-            <S.Toggle
-              onClick={toggleModal}
-              className="t--link  js-hover"
-              aria-label="toggle menu"
-            >
+    <S.Header as="header" style={DelayedFade}>
+      <S.HeaderInner>
+        <S.Logo>
+          <Link to="/" className="js-hover" aria-label="core37, back to home">
+            <Heading as="h1" fontSize={2} mb={0} className="t--uppercase">
               <Scrambler
-                text={!isNavOpen ? 'info' : 'close'}
-                characters={'+-'}
+                text={'Casey Kennedy —'}
+                characters={'—*/+_^'}
                 duration={500}
                 renderIn={500}
-                changeFrom={'+--'}
+                changeFrom={'abcdefghijk'}
               />
-            </S.Toggle>
-          </S.Nav>
-        </S.HeaderInner>
-      </S.Header>
-    </>
+              <br />
+              <Scrambler
+                text={'designer, developer, digital alchemist'}
+                characters={'+-'}
+                duration={1000}
+                renderIn={1000}
+                changeFrom={'abcdefghijk'}
+              />
+            </Heading>
+          </Link>
+        </S.Logo>
+      </S.HeaderInner>
+    </S.Header>
   )
 }
 

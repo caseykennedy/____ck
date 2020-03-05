@@ -40,6 +40,7 @@ type ThemeShape = {
       [key: string]: string
     }
   }
+  border: string
   root: {
     mouseX: string
     mouseY: string
@@ -75,10 +76,10 @@ const theme: ThemeShape = {
 
   colors: {
     text: 'black',
-    background: 'gainsboro',
+    background: '#ededed',
     
-    primary: 'gray',
-    secondary: 'black',
+    primary: 'black',
+    secondary: 'lightgray',
     tertiary: 'gray',
 
     black: '#000000',
@@ -143,7 +144,7 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   maxWidth: 1680,
-  siteWidth: '100vw',
+  siteWidth: '60vw',
 
   grid: {
     gap: '0.5rem'
@@ -151,7 +152,7 @@ const theme: ThemeShape = {
 
   sidebarWidth: {
     collapsed: '56px',
-    expanded: '70vw'
+    expanded: '40vw'
   },
 
   transition: {
@@ -164,6 +165,8 @@ const theme: ThemeShape = {
       to: 'matrix(1, 0, 0, 1, 0, 0)'
     }
   },
+
+  border: `2px solid #000000`,
 
   root: {
     mouseX: 'var(--mouse-x)',

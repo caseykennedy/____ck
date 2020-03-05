@@ -22,7 +22,7 @@ export const ProjectGrid = styled(Box)`
 
     a {
       display: block;
-      margin-bottom: ${theme.space[6]};
+      /* margin-bottom: ${theme.space[6]}; */
 
       img {
         transition: ${theme.transition.all};

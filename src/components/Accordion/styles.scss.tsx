@@ -21,6 +21,7 @@ import { Box, Flex } from '../../elements'
 
 export const AccordionContainer = styled.div`
   width: 100%;
+  position: relative;
 `
 
 export const AccordionInner = styled.div`
