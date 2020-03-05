@@ -31,7 +31,7 @@ import { ProjectNodeShape } from '../types'
 
 // ___________________________________________________________________
 
-type TeamMateProps = {
+type ProjectProps = {
   item: {
     name: string
     id: number
@@ -46,13 +46,15 @@ const AccordionProps = {
   borderColor: theme.colors.text
 }
 
-const TeamMate = ({ item }: TeamMateProps) => {
+const Project = ({ item }: ProjectProps) => {
   const [hoverRef, isHovered] = useHover()
   return (
     // @ts-ignore: Unreachable code error
     <div ref={hoverRef} style={{ position: 'relative' }}>
-      <Box my={4} style={{ borderBottom: '2px solid black' }}>
-        <Text fontSize={[4, 4, 5]}>{item.name}</Text>
+      <Box my={4} pl={3} style={{ borderBottom: '2px solid black' }}>
+        <Text fontSize={[4, 4, 5]} className="t--uppercase">
+          {item.name}
+        </Text>
       </Box>
       <Box width="460px" className={`popup  ${isHovered ? 'show' : ''}`}>
         <ImgMatch src={item.src} altText="core37" />
@@ -93,12 +95,16 @@ const IndexPageComp: React.FC = () => {
       </Section>
       <Section pr={0} pl={0}>
         <Box width={[1]}>
+          <Text as="p" pl={3}>
+            ○ Projects
+          </Text>
           {projectList.map((item, idx) => (
-            <TeamMate key={idx} item={item} />
+            <Project key={idx} item={item} />
           ))}
         </Box>
       </Section>
       <Section>
+        <Text as="p">○ Mission</Text>
         <Box width={[1]}>
           <Heading as="h3">
             I believe that a well defined strategy wins every time. My process
@@ -124,12 +130,13 @@ const IndexPageComp: React.FC = () => {
         </Box>
       </Section>
       <Section>
-        <Text as="p">dribbbles</Text>
+        <Text as="p">○ dribbbles</Text>
         <Box width={[1]}>
           <DribbbleGrid />
         </Box>
       </Section>
       <Section>
+        <Text as="p">○ How can I help?</Text>
         <Box width={[1]}>
           <Heading as="h3">
             If you need a blazing fast website designed <em>and</em> developed

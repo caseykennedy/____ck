@@ -92,7 +92,7 @@ const Sidebar: React.FC<Props> = ({ navData, mainRef }) => {
                 changeFrom={'+--'}
               />
             </S.Toggle>
-            <Text fontSize={3}>✕</Text>
+            <Text fontSize={3}>○</Text>
           </S.Nav>
         </S.SidebarInner>
       </S.Sidebar>

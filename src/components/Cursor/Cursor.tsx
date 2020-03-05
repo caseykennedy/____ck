@@ -53,7 +53,7 @@ const Cursor: React.FC = () => {
   return (
     <>
       <S.Cursor />
-      {/* <S.CursorOuter className={cursorHovered ? 'state--hover' : ''} /> */}
+      <S.CursorOuter className={cursorHovered ? 'state--hover' : ''} />
     </>
   )
 }

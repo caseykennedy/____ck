@@ -51,7 +51,7 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: 2rem 1.5rem 1rem #777;
     position: absolute;
     z-index: 99999;
-    top: 0px;
+    top: -${theme.space[6]};
     left: 105%;
 
     visibility: hidden;

@@ -78,7 +78,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           // }}
         >
           {children}
-          {/* <Footer navData={navData} /> */}
+          <Footer navData={navData} />
         </S.Main>
       </S.Wrapper>
     </ThemeProvider>
