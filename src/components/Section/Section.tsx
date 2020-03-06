@@ -48,7 +48,7 @@ const Section: React.FC<Props> = ({
     pb={pb}
     id={id}
     width={width}
-    style={{ height: `${height}` }}
+    style={{ height: `${height}`, borderBottom: `${theme.border}` }}
   >
     <Box
       width={1}
@@ -68,8 +68,8 @@ export default Section
 // ___________________________________________________________________
 
 const defaultProps = {
-  pt: [4, 6, 8],
-  pb: [4, 6, 8],
+  pt: [6, 6, 8],
+  pb: [3],
   pr: theme.gutter,
   pl: theme.gutter,
   width: 1,

@@ -51,7 +51,7 @@ const Project = ({ item }: ProjectProps) => {
   return (
     // @ts-ignore: Unreachable code error
     <div ref={hoverRef} style={{ position: 'relative' }}>
-      <Box my={4} pl={3} style={{ borderBottom: '2px solid black' }}>
+      <Box my={4} pl={3} style={{ borderBottom: `${theme.border}` }}>
         <Text fontSize={[4, 4, 5]} className="t--uppercase">
           {item.name}
         </Text>
@@ -95,21 +95,21 @@ const IndexPageComp: React.FC = () => {
       </Section>
       <Section pr={0} pl={0}>
         <Box width={[1]}>
-          <Text as="p" pl={3}>
+          <Heading as="h4" pl={3}>
             ○ Projects
-          </Text>
+          </Heading>
           {projectList.map((item, idx) => (
             <Project key={idx} item={item} />
           ))}
         </Box>
       </Section>
       <Section>
-        <Text as="p">○ Mission</Text>
+        <Heading as="h4">○ Mission</Heading>
         <Box width={[1]}>
           <Heading as="h3">
             I believe that a well defined strategy wins every time. My process
-            includes 3 core phases; research, definition and implementation.
-            Every project is approached with a clear and open mindset with the
+            includes 3 core phases; research, definition and execution. Every
+            project is approached with a clear and open mindset with the
             intention to add value.
           </Heading>
           <Heading as="h3">
@@ -119,7 +119,7 @@ const IndexPageComp: React.FC = () => {
             advising on visual identity, technical strategy and digital tooling.
           </Heading>
           <Heading as="h3">
-            I think of clients as patners and don't typically get hired for
+            I think of clients as partners and don't typically get hired for
             one-off projects. My aim is to collaboerate with my partners and,
             over time, build lasting brands and digital experiences.
           </Heading>
@@ -130,13 +130,13 @@ const IndexPageComp: React.FC = () => {
         </Box>
       </Section>
       <Section>
-        <Text as="p">○ dribbbles</Text>
+        <Heading as="h4" mb={3}>○ dribbbles</Heading>
         <Box width={[1]}>
           <DribbbleGrid />
         </Box>
       </Section>
       <Section>
-        <Text as="p">○ How can I help?</Text>
+        <Heading as="h4">○ How can I help?</Heading>
         <Box width={[1]}>
           <Heading as="h3">
             If you need a blazing fast website designed <em>and</em> developed
@@ -145,11 +145,11 @@ const IndexPageComp: React.FC = () => {
             experience (shopify, stripe, CRM), or a shiny new visual identity
             (logo, packaging, implementations), then I’m your man.
           </Heading>
-          <Heading as="h4">
+          <Text as="p">
             For larger projects I work with a collective over at core37. We
             offer a wide-range of brand and digital services utilizing our
             network of peers to get the job done fast and right.
-          </Heading>
+          </Text>
         </Box>
       </Section>
       {/* <Section bg="#113034"></Section>
@@ -177,7 +177,7 @@ const IndexPage = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <IndexPageComp projectData={projectData} />
+        <IndexPageComp />
       </AnimatedBox>
     </Layout>
   )

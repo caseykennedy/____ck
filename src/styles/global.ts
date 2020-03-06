@@ -45,14 +45,15 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .popup {
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
     pointer-events: none;
 
-    box-shadow: 2rem 1.5rem 1rem #777;
+    box-shadow: ${theme.shadow};
+
     position: absolute;
     z-index: 99999;
     top: -${theme.space[6]};
-    left: 105%;
+    left: 110%;
 
     visibility: hidden;
     opacity: 0;

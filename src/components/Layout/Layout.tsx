@@ -70,7 +70,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <Cursor />
       <S.Wrapper ref={scrollRef}>
         <Header />
-        <Sidebar mainRef={mainRef} navData={navData} />
         <S.Main
           ref={mainRef}
           // style={{
@@ -80,6 +79,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {children}
           <Footer navData={navData} />
         </S.Main>
+        <S.Marquee />
+        <Sidebar mainRef={mainRef} navData={navData} />
       </S.Wrapper>
     </ThemeProvider>
   )

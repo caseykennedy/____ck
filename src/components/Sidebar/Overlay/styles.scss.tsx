@@ -32,7 +32,7 @@ export const Overlay = styled.div`
     bottom: 0;
     left: 0;
 
-    background: ${theme.colors.black};
+    background: ${theme.colors.background};
     padding: ${theme.space[2]} ${theme.space[3]} ${theme.space[2]} ${theme.sidebarWidth.collapsed};
     z-index: 30;
 

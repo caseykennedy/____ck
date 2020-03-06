@@ -121,6 +121,9 @@ const Typography = css`
   .text--md {
     font-size: ${theme.root.font.md};
     line-height: ${theme.root.font.bodyLineHeight};
+    text-indent: 0;
+    text-align: left;
+    text-transform: uppercase;
   }
 
   .text--sm,
@@ -133,9 +136,13 @@ const Typography = css`
   }
 
   p {
-    font-size: ${theme.fontSizes[2]};
+    font-size: ${theme.fontSizes[3]};
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 0.8em;
+
+    text-indent: 5rem;
+    text-align: justify;
+    text-justify: inter-word;
 
     &:last-child {
       margin-bottom: 0;

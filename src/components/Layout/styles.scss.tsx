@@ -11,7 +11,7 @@ import { lighten } from 'polished'
 import theme from '../../../config/theme'
 
 // Elements
-import { AnimatedBox } from '../../elements'
+import { Box } from '../../elements'
 
 // Begin Styles
 // ___________________________________________________________________
@@ -32,10 +32,28 @@ export const Main = styled(animated.main)`
   margin-bottom: 0rem;
   /* min-width: 0; slick-slider overflow fix */
 
-  width: ${theme.siteWidth};
+  width: calc(${theme.siteWidth} - ${theme.marqueeWidth});
 
   @media ${theme.mq.medium} {
     /* width: calc(100vw - ${theme.sidebarWidth.expanded}); */
+  }
+`
+
+export const Marquee = styled(Box)`
+  background: ${theme.colors.black};
+  z-index: 30;
+
+  position: fixed;
+  left: calc(${theme.siteWidth} - ${theme.marqueeWidth});
+
+  width: ${theme.marqueeWidth};
+  min-height: 100%;
+
+  span {
+    position: relative;
+    transform: rotate(-45deg);
+    transform-origin: 0 0;
+    color: white;
   }
 `
 

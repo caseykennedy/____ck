@@ -31,18 +31,18 @@ const Header: React.FC<Props> = () => {
           <Link to="/" className="js-hover" aria-label="core37, back to home">
             <Heading as="h1" fontSize={3} mb={0}>
               <Scrambler
-                text={'○ CASEY KENNEDY'}
-                characters={'—*/+_^'}
-                duration={500}
-                renderIn={500}
+                text={'● CASEY KENNEDY'}
+                characters={'●○'}
+                duration={1000}
+                renderIn={1000}
                 changeFrom={'abcdefghijk'}
               />
               <br />
               <Scrambler
                 text={'designer, developer, digital alchemist'}
-                characters={'+-'}
-                duration={1000}
-                renderIn={1000}
+                characters={'●○'}
+                duration={1500}
+                renderIn={1500}
                 changeFrom={'abcdefghijk'}
               />
             </Heading>

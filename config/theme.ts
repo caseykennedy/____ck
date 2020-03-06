@@ -24,12 +24,13 @@ type ThemeShape = {
     [key: string]: number
   }
   strokeWidth: string
-  maxWidth: number
+  maxWidth: string
   siteWidth: string
-  grid: {
+  marqueeWidth: string
+  sidebarWidth: {
     [key: string]: string
   }
-  sidebarWidth: {
+  grid: {
     [key: string]: string
   }
   transition: {
@@ -41,6 +42,7 @@ type ThemeShape = {
     }
   }
   border: string
+  shadow: string
   root: {
     mouseX: string
     mouseY: string
@@ -76,11 +78,11 @@ const theme: ThemeShape = {
 
   colors: {
     text: 'black',
-    background: '#ededed',
+    background: 'ivory',
     
     primary: 'black',
     secondary: 'lightgray',
-    tertiary: 'gray',
+    tertiary: '#8a8a81',
 
     black: '#000000',
     white: '#ffffff',
@@ -144,16 +146,16 @@ const theme: ThemeShape = {
   // Base
   // ___________________________________________________________________
 
-  maxWidth: 1680,
+  maxWidth: '1680px',
   siteWidth: '60vw',
-
-  grid: {
-    gap: '0.5rem'
-  },
-
+  marqueeWidth: '2rem',
   sidebarWidth: {
     collapsed: '56px',
     expanded: '40vw'
+  },
+
+  grid: {
+    gap: '0.5rem'
   },
 
   transition: {
@@ -167,7 +169,8 @@ const theme: ThemeShape = {
     }
   },
 
-  border: `2px solid #000000`,
+  border: '3px solid #000000',
+  shadow: '2rem 1.5rem 1rem #8a8a7c',
 
   root: {
     mouseX: 'var(--mouse-x)',

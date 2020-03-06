@@ -86,10 +86,10 @@ const Sidebar: React.FC<Props> = ({ navData, mainRef }) => {
             >
               <Scrambler
                 text={!isNavOpen ? 'INFO' : 'CLOSE'}
-                characters={'+-'}
+                characters={'●○'}
                 duration={500}
                 renderIn={500}
-                changeFrom={'+--'}
+                changeFrom={'hehe'}
               />
             </S.Toggle>
             <Text fontSize={3}>○</Text>

@@ -42,15 +42,15 @@ const Footer: React.FC<Props> = ({ navData }) => {
         style={{ minHeight: '100vh' }}
       >
         <Box>
-          <Text fontSize={[3, 3, 4]}>
+          <Text fontSize={[3, 3, 4]} mt={[6, 6, 8]}>
             <a href="mailto:me@caseykennedy.me" className="js-hover">
               me@caseykennedy.me
             </a>
           </Text>
         </Box>
         <Flex my={8}>
-          <Box width={[1 / 6]} mr={3}>
-            <Text color="tertiary" mb={5}>
+          <Box width={[1 / 4]} mr={3}>
+            <Text mb={5} className="t--uppercase">
               Experience
             </Text>
             <Text mb={2}>Simple Media</Text>
@@ -60,8 +60,8 @@ const Footer: React.FC<Props> = ({ navData }) => {
             <Text mb={5}>Spheric Agency</Text>
             <Text mb={2}>core37</Text>
           </Box>
-          <Box width={[1 / 6]} mr={3}>
-            <Text color="tertiary" mb={5}>
+          <Box width={[1 / 4]} mr={3}>
+            <Text mb={5} className="t--uppercase">
               Capabilities
             </Text>
             <Text mb={2}>logo identity</Text>
@@ -78,9 +78,10 @@ const Footer: React.FC<Props> = ({ navData }) => {
             <Text mb={2}>design systems</Text>
             <Text mb={2}>ecommerce</Text>
             <Text mb={2}>ongoing support</Text>
+            <Text mb={2}>workshops</Text>
           </Box>
-          <Box width={[1 / 6]} mr={3}>
-            <Text color="tertiary" mb={5}>
+          <Box width={[1 / 4]} mr={3}>
+            <Text mb={5} className="t--uppercase">
               Tech
             </Text>
             <Text mb={2}>javascript</Text>

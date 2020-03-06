@@ -32,7 +32,7 @@ export const Header = styled(AnimatedFlex)`
   background: ${theme.colors.background};
 
   transition: all 0.333s ease-in-out;
-  z-index: 31;
+  z-index: 30;
 `
 
 export const HeaderInner = styled(Flex)`
@@ -40,6 +40,9 @@ export const HeaderInner = styled(Flex)`
   justify-content: flex-start;
   flex-direction: row;
   align-items: center;
+
+  position: relative;
+  /* z-index: 31; */
 `
 
 export const Logo = styled(Box)`
