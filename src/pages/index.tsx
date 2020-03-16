@@ -3,82 +3,21 @@
 // ___________________________________________________________________
 
 import React from 'react'
-import { Link } from 'gatsby'
 
 import { useSpring, config } from 'react-spring'
-import { Cycler, Scrambler } from 'react-text-scrambler'
-
-import useContentYaml from '../hooks/useContentYaml'
-import useProjectYaml from '../hooks/useProjectYaml'
+import { Scrambler } from 'react-text-scrambler'
 
 import Layout from '../components/Layout'
 import Section from '../components/Section'
 import SEO from '../components/SEO'
-import ImgMatch from '../components/ImgMatch'
-import ProjectSlider from '../components/ProjectSlider'
-import ImageHover from '../components/ImageHover'
 
-import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
+import { AnimatedBox, Flex, Heading, Text } from '../elements'
 
 import theme from '../../config/theme'
 
-import { ProjectNodeShape } from '../types'
-
 // ___________________________________________________________________
 
-type PageShape = {
-  pageContext: {
-    intro: string
-    about: {
-      cta: string
-      link: string
-      detail: string
-      title: string
-    }
-    contact: {
-      cta: string
-      detail: string
-    }
-    dribbble: {
-      title: string
-      years: string
-    }
-    posters: {
-      title: string
-      years: string
-    }
-    logofolio: {
-      title: string
-      years: string
-    }
-    projects: {
-      title: string
-    }
-    testimonial: {
-      author: string
-      company: string
-      quote: string
-    }
-  }
-  projectData: { node: ProjectNodeShape }[]
-}
-
-const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
-  // Scrambler params
-  const scrambleStrings = [
-    'friends',
-    'clients',
-    'peeps',
-    'collaborators',
-    'alchemists',
-    'explorers'
-  ]
-  const DelayedFade = useSpring({
-    config: config.molasses,
-    delay: 300,
-    from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
-  })
+const IndexPageComp: React.FC = () => {
   return (
     <>
       <Section pt={3} pb={5}>
@@ -138,31 +77,11 @@ const IndexPageComp: React.FC<PageShape> = ({ pageContext, projectData }) => {
           </Flex>
         </Flex>
       </Section>
-
-      {/* <Section width={1/2} bg="antiquewhite">
-          <Flex flexWrap="wrap">
-            <Box width={[1, 1, 1 / 3]} pr={6} mb={4}>
-              <Text as="p">In the meantime, please find me here:</Text>
-            </Box>
-            <Box width={[1, 1, 2 / 3]}>
-              <Text as="ul">
-                <li>me@caseykennedy.me</li>
-                <li>dribbble</li>
-                <li>github</li>
-                <li>linkedin</li>
-              </Text>
-            </Box>
-          </Flex>
-        </Section> */}
     </>
   )
 }
 
 const IndexPage = () => {
-  const data = useContentYaml()
-  const pageContext = data.edges[0].node.index
-  const projectData = useProjectYaml()
-
   // Page animation
   const pageAnimation = useSpring({
     config: config.molasses,
@@ -174,7 +93,7 @@ const IndexPage = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <IndexPageComp pageContext={pageContext} projectData={projectData} />
+        <IndexPageComp />
       </AnimatedBox>
     </Layout>
   )
