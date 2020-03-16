@@ -55,13 +55,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // {
-    //   resolve: 'gatsby-source-instagram',
-    //   options: {
-    //     access_token: process.env.ACCESS_TOKEN,
-    //     instagram_id: process.env.BUSINESS_ID,
-    //   }
-    // },
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
