@@ -1,29 +1,27 @@
 // Sidebar:
-// 
+//
 
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
 
 import { useSpring, config } from 'react-spring'
 import { Scrambler } from 'react-text-scrambler'
 
 import useScrollWatch from '../../hooks/useScrollWatch'
 
-import Logo from '../logo'
 import NavLinks from './NavLinks'
 import Overlay from './Overlay'
+import Icon from '../Icons'
 
-import { AnimatedBox, Text } from '../../elements'
+import { Heading, Text } from '../../elements'
 
 import theme from '../../../config/theme'
-
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-type Props = {
+type SidebarShape = {
   mainRef: React.RefObject<HTMLDivElement>
   navData: {
     node: {
@@ -33,15 +31,9 @@ type Props = {
   }[]
 }
 
-interface CallbackTypes {
-  callbackData: any
-  previousScrollTop: number
-  currentScrollTop: number
-}
-
 // ___________________________________________________________________
 
-const Sidebar: React.FC<Props> = ({ navData, mainRef }) => {
+const Sidebar: React.FC<SidebarShape> = ({ navData, mainRef }) => {
   // Navigation toggle
   const [isNavOpen, setNavOpen] = useState(false)
   const toggleModal = () => setNavOpen(!isNavOpen)
@@ -56,7 +48,7 @@ const Sidebar: React.FC<Props> = ({ navData, mainRef }) => {
   return (
     <>
       <Overlay
-        id="nav-root"
+        id="drawer-root"
         root="root"
         isOpen={isNavOpen}
         handleExit={() => setNavOpen(false)}
@@ -71,13 +63,6 @@ const Sidebar: React.FC<Props> = ({ navData, mainRef }) => {
       </Overlay>
       <S.Sidebar as="aside" style={DelayedFade}>
         <S.SidebarInner>
-          {/* <S.Logo>
-            <Link to="/" className="js-hover" aria-label="core37, back to home">
-              <Text>
-                ck
-              </Text>
-            </Link>
-          </S.Logo> */}
           <S.Nav>
             <S.Toggle
               onClick={toggleModal}
@@ -92,8 +77,17 @@ const Sidebar: React.FC<Props> = ({ navData, mainRef }) => {
                 changeFrom={'hehe'}
               />
             </S.Toggle>
-            <Text fontSize={3}>○</Text>
+            <Text
+              as="span"
+              fontSize={3}
+              className={`${isNavOpen ? 'nav-bg--open' : ''}`}
+            >
+              ○
+            </Text>
           </S.Nav>
+          <S.Arrow>
+            <Icon name="nextArrow" color="black" />
+          </S.Arrow>
         </S.SidebarInner>
       </S.Sidebar>
     </>

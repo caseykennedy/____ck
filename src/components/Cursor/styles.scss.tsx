@@ -57,11 +57,11 @@ export const CursorOuter = styled.span`
     visibility: visible;
   }
 
-  &.state--hover {
+  /* &.state--hover {
     border-color: ${theme.colors.black};
     width: 320px;
     height: 320px;
-  }
+  } */
 `
 
 // ___________________________________________________________________ Styles

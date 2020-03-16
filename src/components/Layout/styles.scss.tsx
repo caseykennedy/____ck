@@ -11,7 +11,7 @@ import { lighten } from 'polished'
 import theme from '../../../config/theme'
 
 // Elements
-import { Box } from '../../elements'
+import { Box, Flex } from '../../elements'
 
 // Begin Styles
 // ___________________________________________________________________
@@ -28,9 +28,13 @@ export const Wrapper = styled.div`
 `
 
 export const Main = styled(animated.main)`
-  max-height: 100vh;
+  background: ${theme.colors.white};
+  max-height: 100%;
   margin-bottom: 0rem;
   /* min-width: 0; slick-slider overflow fix */
+
+  position: relative;
+  z-index: 22;
 
   width: calc(${theme.siteWidth} - ${theme.marqueeWidth});
 
@@ -39,21 +43,31 @@ export const Main = styled(animated.main)`
   }
 `
 
-export const Marquee = styled(Box)`
+export const Marquee = styled(Flex)`
+  justify-content: center;
+  /* align-items: center; */
+
   background: ${theme.colors.black};
   z-index: 30;
 
   position: fixed;
   left: calc(${theme.siteWidth} - ${theme.marqueeWidth});
 
+  padding: ${theme.space[2]} 0;
   width: ${theme.marqueeWidth};
   min-height: 100%;
 
   span {
     position: relative;
-    transform: rotate(-45deg);
-    transform-origin: 0 0;
-    color: white;
+    right: 1px;
+    color: ${theme.colors.tertiary};
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    
+    font-size: ${theme.fontSizes[2]};
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    white-space: nowrap;
   }
 `
 

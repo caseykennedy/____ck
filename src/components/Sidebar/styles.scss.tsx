@@ -28,13 +28,14 @@ export const Sidebar = styled(AnimatedFlex)`
   right: 0;
   /* width: ${theme.siteWidth}; */
   width: ${theme.sidebarWidth.expanded};
-
   height: 100vh;
   padding: ${theme.space[3]};
-  border-left: ${theme.border};
+
+  background: ${theme.colors.background};
+  /* border-left: ${theme.border}; */
 
   transition: all 0.333s ease-in-out;
-  z-index: 31;
+  z-index: 20;
 
   &.expanded {
     width: ${theme.sidebarWidth.expanded};
@@ -45,39 +46,14 @@ export const Sidebar = styled(AnimatedFlex)`
 
 export const SidebarInner = styled(Flex)`
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   align-items: center;
-`
-
-export const Logo = styled(Box)`
-  font-size: calc(${theme.fontSizes[2]});
-  font-weight: 400;
-  position: relative;
-
-  /* .symbol {
-    animation: ${Rotate} 20s infinite linear;
-  } */
-
-  a {
-    display: flex;
-
-    svg {
-      mix-blend-mode: difference;
-      fill: ${theme.colors.white};
-      margin-right: ${theme.space[2]};
-      position: relative;
-      top: 3px;
-
-      @media ${theme.mq.medium} {
-        height: initial;
-        width: initial;
-      }
-    }
-  }
+  height: 100%;
 `
 
 export const Nav = styled.nav`
+  align-self: flex-start;
   display: inherit;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -105,9 +81,20 @@ export const Nav = styled.nav`
   }
 `
 
+export const Arrow = styled.div`
+  svg {
+    transform: rotate(90deg);
+    width: 20vw;
+  }
+`
+
 export const Toggle = styled.div`
   font-size: calc(${theme.fontSizes[3]});
   font-weight: 400;
+
+  &.nav-bg--open {
+    color: ${theme.colors.background};
+  }
 
   /* &::after {
     content: '';

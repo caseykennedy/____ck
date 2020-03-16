@@ -6,8 +6,6 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 
-import data from './data/footer.yaml'
-
 import { Box, Flex, Text } from '../../elements'
 import Section from '../../components/Section'
 
@@ -16,7 +14,7 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-type Props = {
+type FooterShape = {
   navData?: {
     node: {
       name: string
@@ -29,7 +27,7 @@ const Year = () => {
   return new Date().getFullYear()
 }
 
-const Footer: React.FC<Props> = ({ navData }) => {
+const Footer: React.FC<FooterShape> = ({ navData }) => {
   return (
     <>
       <Flex

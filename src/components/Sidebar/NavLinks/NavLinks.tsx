@@ -37,18 +37,10 @@ type NavLinksProps = {
 
 const NavLink = ({ item, transition, handleExitOnClick }: LinkProps) => {
   return (
-    <AnimatedBox onClick={handleExitOnClick}>
-      <Link to={item.node.link} className="t--link  js-hover">
-        <Text as="span" fontSize={5} fontWeight={400}>
-          <Scrambler
-            text={item.node.name}
-            duration={400}
-            renderIn={400}
-            characters={'+-'}
-            changeFrom={'+--+-'}
-          />
-        </Text>
-      </Link>
+    <AnimatedBox width={1} my={6} onClick={handleExitOnClick} style={transition}>
+      <Text color="white" fontSize={5} fontWeight={400}>
+        Hello
+      </Text>
     </AnimatedBox>
   )
 }
@@ -64,17 +56,16 @@ const NavLinks: React.FC<NavLinksProps> = ({
     {
       from: {
         opacity: 0,
-        transform: 'matrix(1, 0, 0, 1, 0, 32'
+        transform: 'matrix(1, 0, 0, 1, 32, 32'
       },
       enter: {
         opacity: 1,
         transform: 'matrix(1, 0, 0, 1, 0, 0)'
       },
       leave: {
-        opacity: 0,
-        transform: 'matrix(1, 0, 0, 1, 0, 12'
+        opacity: 0
       },
-      trail: 250,
+      trail: 200,
       unique: true
     }
   )

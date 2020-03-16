@@ -81,8 +81,8 @@ const theme: ThemeShape = {
     background: 'ivory',
     
     primary: 'black',
-    secondary: 'lightgray',
-    tertiary: '#8a8a81',
+    secondary: 'ivory',
+    tertiary: '#d4d4c7',
 
     black: '#000000',
     white: '#ffffff',
@@ -148,7 +148,7 @@ const theme: ThemeShape = {
 
   maxWidth: '1680px',
   siteWidth: '60vw',
-  marqueeWidth: '2rem',
+  marqueeWidth: '2.3rem',
   sidebarWidth: {
     collapsed: '56px',
     expanded: '40vw'
@@ -159,7 +159,7 @@ const theme: ThemeShape = {
   },
 
   transition: {
-    all: 'all 0.333s ease-in-out'
+    all: 'all 0.444s ease-in-out'
   },
 
   transform: {

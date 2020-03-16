@@ -29,7 +29,7 @@ type Props = {
 
 const Overlay: React.FC<Props> = ({
   children,
-  id = 'nav-root',
+  id = 'drawer-root',
   root,
   isOpen,
   handleExit,
@@ -62,21 +62,21 @@ const Overlay: React.FC<Props> = ({
     const rootContainer = document.querySelector(`#${root}`)
     const modalContainer = document.querySelector(`#${id}`)
 
-    const capturePosition = () => {
-      const cachedPosition = window.pageYOffset
-      return {
-        freeze: () => {
-          mainRef.current.style = `position: relative; top: ${cachedPosition *
-            -1}px; width: 100%;`
-        },
-        unfreeze: () => {
-          mainRef.current.removeAttribute('style')
-          window.scrollTo({
-            top: cachedPosition
-          })
-        }
-      }
-    }
+    // const capturePosition = () => {
+    //   const cachedPosition = window.pageYOffset
+    //   return {
+    //     freeze: () => {
+    //       mainRef.current.style = `position: relative; top: ${cachedPosition *
+    //         -1}px; width: 100%;`
+    //     },
+    //     unfreeze: () => {
+    //       mainRef.current.removeAttribute('style')
+    //       window.scrollTo({
+    //         top: cachedPosition
+    //       })
+    //     }
+    //   }
+    // }
 
     const toggleTabIndex = (type: 'on' | 'off', container: Element) => {
       const focusableElements = container.querySelectorAll(
@@ -97,7 +97,7 @@ const Overlay: React.FC<Props> = ({
       }
     }
 
-    const { freeze, unfreeze } = capturePosition()
+    // const { freeze, unfreeze } = capturePosition()
 
     if (isOpen) {
       if (exitButton.current) exitButton.current.focus()

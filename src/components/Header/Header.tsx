@@ -17,7 +17,7 @@ import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
-const Header: React.FC<Props> = () => {
+const Header: React.FC = () => {
   const DelayedFade = useSpring({
     config: config.molasses,
     delay: 600,
@@ -33,16 +33,16 @@ const Header: React.FC<Props> = () => {
               <Scrambler
                 text={'● CASEY KENNEDY'}
                 characters={'●○'}
-                duration={1000}
-                renderIn={1000}
+                duration={500}
+                renderIn={500}
                 changeFrom={'abcdefghijk'}
               />
               <br />
               <Scrambler
                 text={'designer, developer, digital alchemist'}
                 characters={'●○'}
-                duration={1500}
-                renderIn={1500}
+                duration={800}
+                renderIn={800}
                 changeFrom={'abcdefghijk'}
               />
             </Heading>

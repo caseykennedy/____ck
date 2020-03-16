@@ -4,18 +4,16 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import { useInView } from 'react-intersection-observer'
-import { useSpring, config } from 'react-spring'
 import { Grid, Cell } from 'styled-css-grid'
 
-import { Box, AnimatedBox, Text } from '../../elements'
+import { AnimatedBox } from '../../elements'
 
 import * as S from './styles.scss'
 import theme from '../../../config/theme'
 
 // ___________________________________________________________________
 
-type QueryResult = {
+type QueryShape = {
   content: {
     edges: {
       node: {
@@ -37,7 +35,7 @@ type QueryResult = {
   }
 }
 
-type ManifestoItem = {
+type DribShape = {
   item: {
     childImageSharp: {
       fluid: {
@@ -56,20 +54,11 @@ type ManifestoItem = {
 
 // ___________________________________________________________________
 
-const DribItem = ({ item }: ManifestoItem) => {
-  // Only show item when in view
-  const [manifestoRef, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: '-180px 0px'
-  })
-  const manifestoSpring = useSpring({
-    opacity: inView ? 1 : 0,
-    transform: inView ? 'matrix(1, 0, 0, 1, 0, 0)' : 'matrix(1, 0, 0, 1, 0, 52)'
-  })
+const DribItem = ({ item }: DribShape) => {
   return (
     <AnimatedBox>
       <Img
-        alt="Dribbble random portfolio art"
+        alt="Select Dribbble shots designed by Casey Kennedy"
         key={item.childImageSharp.fluid.src}
         fluid={item.childImageSharp.fluid}
       />
@@ -78,7 +67,7 @@ const DribItem = ({ item }: ManifestoItem) => {
 }
 
 const DribbbleGrid: React.FC = () => {
-  const data: QueryResult = useStaticQuery(graphql`
+  const data: QueryShape = useStaticQuery(graphql`
     query DribbbleShots {
       content: allFile(filter: { relativeDirectory: { eq: "dribbbles" } }) {
         edges {

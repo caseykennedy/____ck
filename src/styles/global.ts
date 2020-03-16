@@ -2,13 +2,10 @@
 
 // ___________________________________________________________________
 
-// Core
 import { createGlobalStyle } from 'styled-components'
 
-// Theme
 import theme from '../../config/theme'
 
-// Styles
 import RootVars from './root'
 import Reset from './reset'
 import Typography from './typography'
@@ -44,6 +41,12 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  #drawer-root {
+    position: relative;
+    z-index: 21;
+  }
+
+  /* hover popup: need to find a new home for this */
   .popup {
     /* mix-blend-mode: difference; */
     pointer-events: none;
@@ -51,7 +54,7 @@ const GlobalStyles = createGlobalStyle`
     box-shadow: ${theme.shadow};
 
     position: absolute;
-    z-index: 99999;
+    z-index: 2;
     top: -${theme.space[6]};
     left: 110%;
 

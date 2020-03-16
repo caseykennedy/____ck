@@ -95,9 +95,9 @@ const IndexPageComp: React.FC = () => {
       </Section>
       <Section pr={0} pl={0}>
         <Box width={[1]}>
-          <Heading as="h4" pl={3}>
-            ○ Projects
-          </Heading>
+          <Text as="p">
+            Recentish projects worth mentioning.
+          </Text>
           {projectList.map((item, idx) => (
             <Project key={idx} item={item} />
           ))}

@@ -25,27 +25,26 @@ export const Overlay = styled.div`
     align-items: center;
 
     position: fixed;
-    width: 100%;
+    width: 40vw;
     height: 100%;
     top: 0;
-    right: 0;
+    right: 40vw;
     bottom: 0;
-    left: 0;
+    /* left: 0; */
 
-    background: ${theme.colors.background};
-    padding: ${theme.space[2]} ${theme.space[3]} ${theme.space[2]} ${theme.sidebarWidth.collapsed};
-    z-index: 30;
+    background: ${theme.colors.black};
+    padding: ${theme.space[3]};
+    z-index: 20;
 
     visibility: hidden;
-    opacity: 0;
-    transform: matrix(1, 0, 0, 1, 32, 32);
+    opacity: 1;
 
     transition: ${theme.transition.all};
 
     &.nav-bg--open {
       visibility: visible;
       opacity: 1;
-      transform: matrix(1, 0, 0, 1, 0, 0);
+      right: 0;
     }
   }
 `

@@ -23,13 +23,14 @@ export const Header = styled(AnimatedFlex)`
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
+  
+  background: ${theme.colors.white};
+  border-bottom: ${theme.border};
 
   position: fixed;
   left: 0;
   width: ${theme.siteWidth};
   padding: ${theme.space[3]};
-  border-bottom: ${theme.border};
-  background: ${theme.colors.background};
 
   transition: all 0.333s ease-in-out;
   z-index: 30;
