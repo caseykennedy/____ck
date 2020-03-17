@@ -28,7 +28,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const scrollRef = useRef<HTMLDivElement>(null)
 
   // eslint-disable-next-line no-console
-  console.log(`%c (+)(—) core37 `, `background: #000000; color: #ffffff`)
+  console.log(`%c t3tra `, `background: #000000; color: #ffffff`)
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
