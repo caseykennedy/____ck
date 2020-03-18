@@ -37,7 +37,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   // Navigation data hook
   const navData = useNavigation()
 
-  // Ref <main> to lock body on scroll
+  // Ref <main> to lock body for modal/overlay
   const mainRef = useRef<HTMLDivElement>(null)
 
   // Parallax scroll
@@ -47,7 +47,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     // Need to figure this type error out
     const posY = scrollRef.current.getBoundingClientRect().top
     const offset = window.pageYOffset - posY
-
     set({ offset })
   }
 
@@ -91,5 +90,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
 
 export default Layout
-
-// ___________________________________________________________________
