@@ -186,9 +186,13 @@ const Typography = css`
   }
 
   p {
-    font-size: ${theme.fontSizes[2]};
+    font-size: calc(${theme.fontSizes[3]} / 1.35);
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 0.8em;
+
+    @media ${theme.mq.medium} {
+      font-size: ${theme.fontSizes[3]};
+    }
 
     &:last-child {
       margin-bottom: 0;
