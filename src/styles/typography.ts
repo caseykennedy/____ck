@@ -71,7 +71,7 @@ const Typography = css`
     font-family: ${theme.fonts.heading};
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
-    margin: 0 0 0.2em;
+    margin: 0 0 ${theme.space[2]};
     transition: ${theme.transition.all};
 
     text-indent: 5rem;
@@ -90,11 +90,11 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    font-size: calc(${theme.root.font.xl});
-    line-height: calc(${theme.root.font.headingLineHeight} / 1);
+    font-size: calc(${theme.root.font.xl} / 1);
+    line-height: calc(${theme.root.font.headingLineHeight} / 1.25);
 
     @media ${theme.mq.medium} {
-      font-size: ${theme.root.font.xxl};
+      font-size: calc(${theme.root.font.xxl});
     }
   }
 

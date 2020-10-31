@@ -78,12 +78,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           {children}
           <Footer navData={navData} />
         </S.Main>
-        <S.Marquee>
-          <span>
-            I specialise in creating interactive experiences CONTACT ME
-          </span>
-        </S.Marquee>
-        <Sidebar mainRef={mainRef} navData={navData} />
       </S.Wrapper>
     </ThemeProvider>
   )

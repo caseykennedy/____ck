@@ -8,7 +8,6 @@ import { Link } from 'gatsby'
 import { useSpring, config } from 'react-spring'
 import { Cycler, Scrambler } from 'react-text-scrambler'
 
-import useContentYaml from '../hooks/useContentYaml'
 import useProjectYaml from '../hooks/useProjectYaml'
 import useHover from '../hooks/useHover'
 
@@ -77,50 +76,40 @@ const IndexPageComp: React.FC = () => {
           flexDirection="column"
           justifyContent="flex-end"
           width={[1]}
-          style={{ minHeight: '100vh' }}
+          style={{ height: '100vh' }}
           pt={3}
           pb={3}
         >
-          <Box>
-            <Heading as="h3">
-              I run a boutique design and development practice helping brands
-              define and develop visual identity systems and cutting-edge
-              digital experiences.
-            </Heading>
-            {/* <Box as="span" style={{ transform: 'rotate(45deg)' }}>
-              <Icon name="nextArrow" color={theme.colors.text} />
-            </Box> */}
-          </Box>
+          <Heading as="h2" fontSize={[4, 4, 5]}>
+            I help brands define and develop visual identity systems and
+            cutting-edge ● digital experiences.
+          </Heading>
         </Flex>
       </Section>
-      <Section pr={0} pl={0}>
-        <Box width={[1]}>
-          <Text as="p">
-            Recentish projects worth mentioning.
-          </Text>
-          {projectList.map((item, idx) => (
-            <Project key={idx} item={item} />
-          ))}
-        </Box>
+      <Section bg="black" color="background" pt={2} pb={2}>
+        <Text as="p" fontSize={2} textAlign="right">
+          thanks for visiting ☀️ currently building a fresh site with an updated
+          portfolio 🌙 please stay tuned ✌️
+        </Text>
       </Section>
       <Section>
         <Heading as="h4">○ Mission</Heading>
         <Box width={[1]}>
           <Heading as="h3">
             I believe that a well defined strategy wins every time. My process
-            includes 3 core phases; research, definition and execution. Every
+            includes 3 core phases ● research, definition and execution. Every
             project is approached with a clear and open mindset with the
             intention to add value.
           </Heading>
           <Heading as="h3">
             I’ve been working in design and web development for over 11 years
             and as an independent consultant for the last 5 years. Collaborating
-            with startups, established brands and anyone with a great idea —
+            with startups, established brands and anyone with a great idea ●
             advising on visual identity, technical strategy and digital tooling.
           </Heading>
           <Heading as="h3">
             I think of clients as partners and don't typically get hired for
-            one-off projects. My aim is to collaboerate with my partners and,
+            one-off projects. My aim is to collaboerate with my partners ● and,
             over time, build lasting brands and digital experiences.
           </Heading>
           {/* <Text as="p">
@@ -130,8 +119,10 @@ const IndexPageComp: React.FC = () => {
         </Box>
       </Section>
       <Section>
-        <Heading as="h4" mb={3}>○ dribbbles</Heading>
-        <Box width={[1]}>
+        <Heading as="h4" mb={3}>
+          ○ dribbbles
+        </Heading>
+        <Box>
           <DribbbleGrid />
         </Box>
       </Section>
@@ -140,14 +131,14 @@ const IndexPageComp: React.FC = () => {
         <Box width={[1]}>
           <Heading as="h3">
             If you need a blazing fast website designed <em>and</em> developed
-            with all the bells and whistles (react, gatsby, graphQL, headless
-            CMS, animations, SEO, accessibility), a high-conversion e-commerce
-            experience (shopify, stripe, CRM), or a shiny new visual identity
-            (logo, packaging, implementations), then I’m your man.
+            with all the bells and whistles (react, gatsby, graphQL, headless,
+            serverless, animations, SEO, accessibility) ● a high-conversion
+            e-commerce experience (shopify, stripe, CRM), or a shiny new visual
+            identity (logo, packaging, implementations), then I’m your man.
           </Heading>
           <Text as="p">
             For larger projects I work with a collective over at core37. We
-            offer a wide-range of brand and digital services utilizing our
+            offer a ● wide-range of brand and digital services utilizing our
             network of peers to get the job done fast and right.
           </Text>
         </Box>
@@ -159,9 +150,8 @@ const IndexPageComp: React.FC = () => {
 }
 
 const IndexPage = () => {
-  const data = useContentYaml()
   // const pageContext = data.edges[0].node.index
-  const projectData = useProjectYaml()
+  // const projectData = useProjectYaml()
 
   // console.log('PROJECTS')
   // console.log(projectData)

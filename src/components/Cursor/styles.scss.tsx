@@ -9,17 +9,17 @@ import theme from '../../../config/theme'
 // ___________________________________________________________________
 
 export const Cursor = styled.span`
-  /* mix-blend-mode: difference; */
+  mix-blend-mode: difference;
   pointer-events: none;
   z-index: 11000;
 
   position: fixed;
-  top: -20px;
-  left: -20px;
-  width: 48px;
-  height: 48px;
+  top: -30px;
+  left: -30px;
+  width: 64px;
+  height: 64px;
 
-  background-color: ${theme.colors.black};
+  background-color: blue;
   /* border: 6px solid ${theme.colors.primary}; */
   border-radius: 50%;
 

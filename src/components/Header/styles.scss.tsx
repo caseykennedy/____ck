@@ -24,12 +24,12 @@ export const Header = styled(AnimatedFlex)`
   flex-wrap: nowrap;
   justify-content: space-between;
   
-  background: ${theme.colors.white};
+  background: ${theme.colors.background};
   border-bottom: ${theme.border};
 
   position: fixed;
   left: 0;
-  width: ${theme.siteWidth};
+  width: 100%;
   padding: ${theme.space[3]};
 
   transition: all 0.333s ease-in-out;

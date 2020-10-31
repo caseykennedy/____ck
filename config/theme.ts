@@ -46,8 +46,10 @@ type ThemeShape = {
   root: {
     mouseX: string
     mouseY: string
-    space: string
     font: {
+      [key: string]: string
+    }
+    space: {
       [key: string]: string
     }
   }
@@ -92,20 +94,20 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   space: [
-    '0',          // 0
-    '0.25rem',    // 1
-    '0.5rem',     // 2
-    '1rem',       // 3
-    '1.5rem',     // 4
-    '2rem',       // 5
-    '3rem',       // 6
-    '4rem',       // 7
-    '8rem',       // 8
-    '10rem',      // 9
-    '12rem',      // 10
-    '14rem',      // 11
-    '16rem',      // 12
-    '18rem'       // 13
+    '0',                     // 0
+    'var(--space-xxs)',      // 1
+    'var(--space-xs)',       // 2
+    'var(--space-sm)',       // 3
+    'var(--space-md)',       // 4
+    'var(--space-lg)',       // 5
+    'var(--space-xl)',       // 6
+    'var(--space-xxl)',      // 7
+    '6rem',                  // 8
+    '10rem',                 // 9
+    '12rem',                 // 10
+    '14rem',                 // 11
+    '16rem',                 // 12
+    '18rem'                  // 13
   ],
 
   // Main section x-axis gutter
@@ -175,7 +177,6 @@ const theme: ThemeShape = {
   root: {
     mouseX: 'var(--mouse-x)',
     mouseY: 'var(--mouse-y)',
-    space: 'var(--root-size)',
     font: {
       // Base sizing
       baseSize: 'var(--text-base-size)',
@@ -194,6 +195,15 @@ const theme: ThemeShape = {
       // Line height
       headingLineHeight: 'var(--heading-line-height)',
       bodyLineHeight: 'var(--body-line-height)'
+    },
+    space: {
+      xxs: 'var(--space-xxs)',
+      xs: 'var(--space-xs)',
+      sm: 'var(--space-sm)',
+      md: 'var(--space-md)',
+      lg: 'var(--space-lg)',
+      xl: 'var(--space-xl)',
+      xxl: 'var(--space-xxl)'
     }
   }
 }

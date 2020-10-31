@@ -40,16 +40,16 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
         style={{ minHeight: '100vh' }}
       >
         <Box>
-          <Text fontSize={[3, 3, 4]} mt={[6, 6, 8]}>
+          <Text fontSize={[2, 3, 4]} mt={[4]}>
             <a href="mailto:me@caseykennedy.me" className="js-hover">
-              me@caseykennedy.me
+              me●caseykennedy.me
             </a>
           </Text>
         </Box>
-        <Flex my={8}>
-          <Box width={[1 / 4]} mr={3}>
+        <Flex my={8} flexWrap="wrap">
+          <Box width={[1 / 2, 1 / 2, 1 / 4]} mr={[0, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
-              Experience
+            ● Experience
             </Text>
             <Text mb={2}>Simple Media</Text>
             <Text mb={6}>Medium Advertising</Text>
@@ -57,39 +57,42 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
             <Text mb={2}>noip</Text>
             <Text mb={5}>Spheric Agency</Text>
             <Text mb={2}>core37</Text>
+            <Text mb={2}>eOn</Text>
           </Box>
-          <Box width={[1 / 4]} mr={3}>
+          <Box width={[1 / 2, 1 / 2, 1 / 4]} mr={[0, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
-              Capabilities
+            ● Capabilities
             </Text>
             <Text mb={2}>logo identity</Text>
             <Text mb={2}>brand guidelines</Text>
             <Text mb={2}>packaging</Text>
             <Text mb={2}>implementations</Text>
             <Text mb={2}>editorial design</Text>
-            <Text mb={2}>sound design</Text>
+            <Text mb={5}>sound design</Text>
             <Text mb={2}>wayfinding</Text>
             <Text mb={2}>visual design</Text>
             <Text mb={2}>UI &amp; UX</Text>
-            <Text mb={2}>prototyping</Text>
+            <Text mb={5}>prototyping</Text>
+
+            <Text mb={2}>JAMstack</Text>
             <Text mb={2}>web development</Text>
             <Text mb={2}>design systems</Text>
             <Text mb={2}>ecommerce</Text>
-            <Text mb={2}>ongoing support</Text>
+            <Text mb={5}>ongoing support</Text>
             <Text mb={2}>workshops</Text>
           </Box>
-          <Box width={[1 / 4]} mr={3}>
+          <Box width={[1, 1 / 2, 1 / 4]} mr={[0, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
-              Tech
+            ● Tech
             </Text>
-            <Text mb={2}>javascript</Text>
-            <Text mb={2}>HTML+CSS</Text>
             <Text mb={2}>react</Text>
             <Text mb={2}>gatsby / next</Text>
+            <Text mb={2}>javascript</Text>
+            <Text mb={2}>HTML+CSS</Text>
             <Text mb={2}>typescript</Text>
             <Text mb={2}>graphQL</Text>
             <Text mb={2}>shopify / stripe</Text>
-            <Text mb={2}>wordpress</Text>
+            <Text mb={5}>wordpress</Text>
           </Box>
           {/* <Box width={[1 / 6]} mr={3}>
             <Text color="tertiary" mb={5}>
@@ -109,13 +112,14 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
           >
             <Text>Find me on:</Text>
             {navData.map(({ node: item }) => (
-              <Link
-                to={item.link}
+              <a
+                href={item.link}
+                target="_blank"
                 key={item.name}
                 className="t--link  js-hover"
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </Flex>
         )}

@@ -29,7 +29,7 @@ const Header: React.FC = () => {
       <S.HeaderInner>
         <S.Logo>
           <Link to="/" className="js-hover" aria-label="core37, back to home">
-            <Heading as="h1" fontSize={3} mb={0}>
+            <Heading as="h1" fontSize={[1, 2, 3]} mb={0}>
               <Scrambler
                 text={'● CASEY KENNEDY'}
                 characters={'●○'}
