@@ -6,21 +6,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { useSpring, config } from 'react-spring'
-import { Cycler, Scrambler } from 'react-text-scrambler'
-
-import useProjectYaml from '../hooks/useProjectYaml'
-import useHover from '../hooks/useHover'
 
 import Layout from '../components/Layout'
 import Section from '../components/Section'
 import SEO from '../components/SEO'
-import ProjectGrid from '../components/ProjectGrid'
 import DribbbleGrid from '../components/DribbbleGrid'
 import ImgMatch from '../components/ImgMatch'
-import ImageHover from '../components/ImageHover'
-import Divider from '../elements/Divider'
-import Icon from '../components/Icons'
-import Accordion from '../components/Accordion'
 
 import { AnimatedBox, Box, Flex, Heading, Text } from '../elements'
 
@@ -30,45 +21,7 @@ import { ProjectNodeShape } from '../types'
 
 // ___________________________________________________________________
 
-type ProjectProps = {
-  item: {
-    name: string
-    id: number
-    src: string
-  }
-}
-
-const AccordionProps = {
-  chevronColor: theme.colors.text,
-  color: theme.colors.text,
-  colorActive: theme.colors.text,
-  borderColor: theme.colors.text
-}
-
-const Project = ({ item }: ProjectProps) => {
-  const [hoverRef, isHovered] = useHover()
-  return (
-    // @ts-ignore: Unreachable code error
-    <div ref={hoverRef} style={{ position: 'relative' }}>
-      <Box my={4} pl={3} style={{ borderBottom: `${theme.border}` }}>
-        <Text fontSize={[4, 4, 5]} className="t--uppercase">
-          {item.name}
-        </Text>
-      </Box>
-      <Box width="460px" className={`popup  ${isHovered ? 'show' : ''}`}>
-        <ImgMatch src={item.src} altText="core37" />
-      </Box>
-    </div>
-  )
-}
-
 const IndexPageComp: React.FC = () => {
-  const DelayedFade = useSpring({
-    config: config.molasses,
-    delay: 300,
-    from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
-  })
   return (
     <>
       <Section pt={0} pb={0}>
@@ -81,14 +34,14 @@ const IndexPageComp: React.FC = () => {
           pb={3}
         >
           <Heading as="h2" fontSize={[4, 4, 5]}>
-            I help brands define and develop visual identity systems and
-            cutting-edge ● digital experiences.
+            Helping brands define and develop visual identity systems ● and
+            cutting-edge digital ○ experiences.
           </Heading>
         </Flex>
       </Section>
       <Section bg="black" color="background" pt={2} pb={2}>
-        <Text as="p" fontSize={2} textAlign="right">
-          thanks for visiting ☀️ currently building a fresh site with an updated
+        <Text as="p" fontSize={2}>
+          Thank you for visiting ☀️ currently building a fresh new website with an updated
           portfolio 🌙 please stay tuned ✌️
         </Text>
       </Section>
@@ -96,26 +49,22 @@ const IndexPageComp: React.FC = () => {
         <Heading as="h4">○ Mission</Heading>
         <Box width={[1]}>
           <Heading as="h3">
-            I believe that a well defined strategy wins every time. My process
-            includes 3 core phases ● research, definition and execution. Every
+            I believe that a well defined strategy wins every time ● My process
+            includes 3 core phases: research, definition and execution ○ Every
             project is approached with a clear and open mindset with the
-            intention to add value.
+            intention to add value ● Always out of the box, but never out of touch.
           </Heading>
           <Heading as="h3">
-            I’ve been working in design and web development for over 11 years
-            and as an independent consultant for the last 5 years. Collaborating
-            with startups, established brands and anyone with a great idea ●
+            I’ve been working in design and ● web development for over 12 years
+            and as an independent consultant for the last 6 years. Collaborating
+            with startups, established brands and anyone with a great idea ●○
             advising on visual identity, technical strategy and digital tooling.
           </Heading>
           <Heading as="h3">
-            I think of clients as partners and don't typically get hired for
-            one-off projects. My aim is to collaboerate with my partners ● and,
+            I think of clients as partners and don't typically ● get hired for
+            one-off projects. My aim is to collaboerate with my partners and ○
             over time, build lasting brands and digital experiences.
           </Heading>
-          {/* <Text as="p">
-            Finding balance among simplicity, form and function in my work and
-            sharing gratitude with those I collaborate with is my goal.
-          </Text> */}
         </Box>
       </Section>
       <Section>
@@ -131,32 +80,23 @@ const IndexPageComp: React.FC = () => {
         <Box width={[1]}>
           <Heading as="h3">
             If you need a blazing fast website designed <em>and</em> developed
-            with all the bells and whistles (react, gatsby, graphQL, headless,
+            with all the ○ bells and whistles (react, gatsby, headless,
             serverless, animations, SEO, accessibility) ● a high-conversion
             e-commerce experience (shopify, stripe, CRM), or a shiny new visual
             identity (logo, packaging, implementations), then I’m your man.
           </Heading>
           <Text as="p">
-            For larger projects I work with a collective over at core37. We
-            offer a ● wide-range of brand and digital services utilizing our
-            network of peers to get the job done fast and right.
+            For larger projects ● I work with a collective over at ○●core37. We
+            offer a wide-range of brand and digital services utilizing our
+            network of peers ○ to get the job done fast and right.
           </Text>
         </Box>
       </Section>
-      {/* <Section bg="#113034"></Section>
-      <Section bg="goldenrod"></Section> */}
     </>
   )
 }
 
 const IndexPage = () => {
-  // const pageContext = data.edges[0].node.index
-  // const projectData = useProjectYaml()
-
-  // console.log('PROJECTS')
-  // console.log(projectData)
-
-  // Page animation
   const pageAnimation = useSpring({
     config: config.molasses,
     delay: 0,
@@ -174,33 +114,3 @@ const IndexPage = () => {
 }
 
 export default IndexPage
-
-// ___________________________________________________________________
-
-const projectList = [
-  {
-    id: 1,
-    name: 'blackbird',
-    src: 'reading.jpg'
-  },
-  {
-    id: 2,
-    name: 'cannavative',
-    src: 'drib__neon_4x.png'
-  },
-  {
-    id: 3,
-    name: 'logofolio',
-    src: 'meeting.jpg'
-  },
-  {
-    id: 4,
-    name: 'posters 2019',
-    src: 'reading.jpg'
-  },
-  {
-    id: 5,
-    name: 'bottle barn',
-    src: 'meeting.jpg'
-  }
-]

@@ -5,10 +5,7 @@
 
 import * as React from 'react'
 import { Link } from 'gatsby'
-
 import { Box, Flex, Text } from '../../elements'
-import Section from '../../components/Section'
-
 import theme from '../../../config/theme'
 import * as S from './styles.scss'
 
@@ -49,19 +46,19 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
         <Flex my={8} flexWrap="wrap">
           <Box width={[1 / 2, 1 / 2, 1 / 4]} mr={[0, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
-            ● Experience
+              ○ Experience
             </Text>
             <Text mb={2}>Simple Media</Text>
             <Text mb={6}>Medium Advertising</Text>
             <Text mb={2}>Atlantis Casino Resort</Text>
             <Text mb={2}>noip</Text>
-            <Text mb={5}>Spheric Agency</Text>
+            <Text mb={5}>spheric agency</Text>
             <Text mb={2}>core37</Text>
             <Text mb={2}>eOn</Text>
           </Box>
           <Box width={[1 / 2, 1 / 2, 1 / 4]} mr={[0, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
-            ● Capabilities
+              ○ Capabilities
             </Text>
             <Text mb={2}>logo identity</Text>
             <Text mb={2}>brand guidelines</Text>
@@ -83,7 +80,7 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
           </Box>
           <Box width={[1, 1 / 2, 1 / 4]} mr={[0, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
-            ● Tech
+              ○ Tech
             </Text>
             <Text mb={2}>react</Text>
             <Text mb={2}>gatsby / next</Text>
@@ -94,12 +91,7 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
             <Text mb={2}>shopify / stripe</Text>
             <Text mb={5}>wordpress</Text>
           </Box>
-          {/* <Box width={[1 / 6]} mr={3}>
-            <Text color="tertiary" mb={5}>
-              Enquiries
-            </Text>
-            <Text mb={6}>me@caseykennedy.me</Text>
-          </Box> */}
+
         </Flex>
         {navData && (
           <Flex
@@ -109,6 +101,7 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
             flexWrap="wrap"
             alignItems="flex-start"
             justifyContent="space-between"
+            mb={[4, 0]}
           >
             <Text>Find me on:</Text>
             {navData.map(({ node: item }) => (

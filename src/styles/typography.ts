@@ -109,11 +109,11 @@ const Typography = css`
 
   h3,
   .text--lg {
-    font-size: ${theme.root.font.md};
+    font-size: calc(${theme.fontSizes[3]});
     /* line-height: ${theme.root.font.bodyLineHeight}; */
 
     @media ${theme.mq.medium} {
-      font-size: ${theme.root.font.lg};
+      font-size: calc(${theme.fontSizes[5]});
     }
   }
 
