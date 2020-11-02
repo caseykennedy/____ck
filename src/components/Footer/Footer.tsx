@@ -34,12 +34,12 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
         width={1}
         px={theme.gutter}
         py={theme.gutter}
-        style={{ minHeight: '100vh' }}
+        style={{ minHeight: '80vh' }}
       >
         <Box>
-          <Text fontSize={[2, 3, 4]} mt={[4]}>
+          <Text fontSize={[4, 5, 7]} mt={[4, 3, 0]}>
             <a href="mailto:me@caseykennedy.me" className="js-hover">
-              me●caseykennedy.me
+              Say hi 👋
             </a>
           </Text>
         </Box>
@@ -91,7 +91,13 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
             <Text mb={2}>shopify / stripe</Text>
             <Text mb={5}>wordpress</Text>
           </Box>
-
+          {/* <Box width={1}>
+            <Text fontSize={[4, 5, 7]} mt={[4, 3, 0]}>
+              <a href="mailto:me@caseykennedy.me" className="js-hover">
+                Write me 😃
+              </a>
+            </Text>
+          </Box> */}
         </Flex>
         {navData && (
           <Flex
