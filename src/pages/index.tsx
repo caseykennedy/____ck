@@ -29,8 +29,8 @@ const IndexPageComp: React.FC = () => {
           pb={3}
         >
           <Heading as="h2" fontSize={[4, 4, 5]}>
-            Helping brands define and develop visual identity systems ● and
-            cutting-edge digital ○ experiences.
+            Helping brands define and develop visual identity systems and
+            cutting-edge digital experiences.
           </Heading>
         </Flex>
       </Section>
@@ -44,21 +44,21 @@ const IndexPageComp: React.FC = () => {
         <Heading as="h4">○ Mission</Heading>
         <Box width={[1]}>
           <Heading as="h3">
-            I believe that a well defined strategy ↗ wins every time. My
-            process includes ➌ core phases: research, definition and execution ○
-            Every project is approached with a clear and open mindset with the
-            intention to add value ● Always out of the box □ but never out of
+            I believe that a well defined strategy ↗ wins every time. My process
+            includes ➌ core phases: research, definition and execution. Every
+            project is approached with a clear and open mindset with the
+            intention to add value. Always out of the box □ but never out of
             touch.
           </Heading>
           <Heading as="h3">
-            I’ve been working in design and ● web development for over ➊➁ years
+            I’ve been working in design and web development for over ➊➁ years
             and as an independent consultant for the last ➏ years. Collaborating
-            with startups, established brands and anyone with a great idea ●○
+            with startups, established brands and anyone with a great idea —
             advising on visual identity, technical strategy and digital tooling.
           </Heading>
           <Heading as="h3">
-            I think of clients as partners and don't typically ● get hired for
-            one-off projects. My aim is to collaborate with my partners and ○
+            I think of clients as partners and don't typically get hired for
+            one-off projects. My aim is to collaborate with my partners and,
             through time ∞, build lasting brands and digital experiences.
           </Heading>
         </Box>
@@ -78,7 +78,7 @@ const IndexPageComp: React.FC = () => {
             If you need a blazing fast website designed <em>and</em> developed
             with all the ○ bells and whistles (react, JAMstack, headless,
             serverless, animations, SEO, accessibility) ● a high-conversion
-            e-commerce experience (shopify, stripe, CRM), or a shiny new visual
+            e-commerce experience (shopify, CRM, strategy), or a shiny new visual
             identity (logo, packaging, implementations), then I’m your man.
           </Heading>
           <Text as="p">
