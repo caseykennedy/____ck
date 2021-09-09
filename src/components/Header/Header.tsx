@@ -3,29 +3,18 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
-
-import { useSpring, config } from 'react-spring'
 import { Scrambler } from 'react-text-scrambler'
-
 import { Text, Heading } from '../../elements'
-
 import theme from '../../../config/theme'
-
 import * as S from './styles.scss'
 
 // ___________________________________________________________________
 
 const Header: React.FC = () => {
-  const DelayedFade = useSpring({
-    config: config.molasses,
-    delay: 600,
-    from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
-  })
   return (
-    <S.Header as="header" style={DelayedFade}>
+    <S.Header as="header">
       <S.HeaderInner>
         <S.Logo>
           <Link to="/" className="js-hover" aria-label="core37, back to home">
@@ -38,9 +27,9 @@ const Header: React.FC = () => {
                 changeFrom={'abcdefghijk'}
               />
               <br />
-              <Text fontSize={0} mt={2}>
+              <Text fontSize={[1, 0]} mt={2}>
                 <Scrambler
-                  text={'designer ● developer ● digital alchemist'}
+                  text={'designer, developer, digital alchemist'}
                   characters={'●○'}
                   duration={800}
                   renderIn={800}

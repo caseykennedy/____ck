@@ -37,13 +37,13 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
         style={{ minHeight: '80vh' }}
       >
         <Box>
-          <Text fontSize={[5, 5, 5]} mt={[4, 3, 0]}>
+          <Text fontSize={[4, 5, 5]} mt={[3, 3, 0]}>
             <a href="mailto:me@caseykennedy.me" className="js-hover">
               Say hi 👋
             </a>
           </Text>
         </Box>
-        <Flex my={8} flexWrap="wrap">
+        <Flex my={6} flexWrap="wrap">
           <Box width={[1 / 2, 1 / 2, 1 / 4]} mr={[3, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
               ○ Experience

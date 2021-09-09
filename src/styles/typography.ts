@@ -74,9 +74,14 @@ const Typography = css`
     margin: 0 0 ${theme.space[2]};
     transition: ${theme.transition.all};
 
-    text-indent: 5rem;
+    text-indent: ${theme.space[4]};
     text-align: justify;
     text-justify: inter-word;
+
+    @media ${theme.mq.medium} {
+      text-indent: ${theme.space[5]};
+      font-size: calc(${theme.root.font.xxxl} * 1.25);
+    }
   }
 
   .text--xxxl {
