@@ -90,6 +90,7 @@ const Typography = css`
 
   h1,
   .text--xxl {
+    text-indent: 0;
     font-size: calc(${theme.root.font.xl} / 1);
     line-height: calc(${theme.root.font.headingLineHeight} / 1.25);
 
@@ -163,6 +164,7 @@ const Typography = css`
   }
 
   a {
+    color: ${theme.colors.blue};
     text-decoration: none;
     position: relative;
     z-index: 1;

@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const Main = styled(animated.main)`
+export const Main = styled.main`
 
   @media ${theme.mq.medium} {
   }

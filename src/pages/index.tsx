@@ -29,44 +29,58 @@ const IndexPageComp: React.FC = () => {
           pb={3}
         >
           <Heading as="h2" fontSize={[4, 4, 5]}>
-            Helping brands define and develop visual identity systems and
-            cutting-edge digital experiences.
+            Helping brands develop cutting-edge digital experiences.
           </Heading>
         </Flex>
       </Section>
       <Section bg="black" color="background" pt={2} pb={2}>
         <Text as="p" fontSize={2}>
-          Thank you for visiting ☀️ currently building a fresh new website with
-          an updated portfolio 🌙 please stay tuned ✌️
+          I've got a brand new website in the works—stay tuned ✌️
         </Text>
       </Section>
       <Section>
         <Heading as="h4">○ Mission</Heading>
         <Box width={[1]}>
           <Heading as="h3">
-            I believe that a well defined strategy ↗ wins every time. My process
-            includes ➌ core phases: research, definition and execution. Every
-            project is approached with a clear and open mindset with the
-            intention to add value. Always out of the box □ but never out of
-            touch.
+            I believe that a well defined strategy wins every time ↗ My process
+            includes ➌ core phases: research, definition, and execution.
           </Heading>
           <Heading as="h3">
-            I’ve been working in design and web development for over ➊➁ years
-            and as an independent consultant for the last ➏ years. Collaborating
-            with startups, established brands and anyone with a great idea —
-            advising on visual identity, technical strategy and digital tooling.
+            Every project is approached with a clear and open mindset and
+            intention to add value.
           </Heading>
           <Heading as="h3">
-            I think of clients as partners and don't typically get hired for
-            one-off projects. My aim is to collaborate with my partners and,
-            through time ∞, build lasting brands and digital experiences.
+            Always out of the box □ but never out of touch.
+          </Heading>
+          <Heading as="h3">
+            I’ve been practicing design and web development for over ➊➁ years
+            and independently consulting for the last ➏ years. Collaborating
+            with startups, established brands and anyone with a great
+            idea—advising on visual identity, technical strategy and digital
+            tooling.
+          </Heading>
+          <Heading as="h3">
+            My aim is to collaborate with my partners and, through time ∞, build
+            lasting brands and digital experiences.
           </Heading>
         </Box>
       </Section>
       <Section bg="black" color="background">
-        <Heading as="h4" mb={3}>
-          ○ dribbbles
-        </Heading>
+        <Flex
+          width={1}
+          alignItems={['flex-start', 'flex-start', 'center']}
+          flexDirection={['column', 'column', 'row']}
+          justifyContent="space-between"
+        >
+          <Heading as="h4" mb={[0, 0, 3]}>
+            ○ dribbbles
+          </Heading>
+          <Text mb={[3, 3, 0]}>
+            <a href="https://dribbble.com/caseykennedy" target="_blank">
+              follow me on dribbble
+            </a>
+          </Text>
+        </Flex>
         <Box>
           <DribbbleGrid />
         </Box>
@@ -76,16 +90,11 @@ const IndexPageComp: React.FC = () => {
         <Box width={[1]}>
           <Heading as="h3">
             If you need a blazing fast website designed <em>and</em> developed
-            with all the ○ bells and whistles (react, JAMstack, headless,
+            with all the bells and whistles (react, JAMstack, headless,
             serverless, animations, SEO, accessibility) ● a high-conversion
-            e-commerce experience (shopify, CRM, strategy), or a shiny new visual
-            identity (logo, packaging, implementations), then I’m your man.
+            e-commerce experience ● or a shiny new visual identity (logo,
+            packaging, editorial) ● then I’m your man.
           </Heading>
-          <Text as="p">
-            For larger projects ● I work with a collective over at ○●core37. We
-            offer a wide-range of brand and digital services utilizing our
-            network of peers ○ to get the job done fast and right.
-          </Text>
         </Box>
       </Section>
     </>
@@ -93,18 +102,10 @@ const IndexPageComp: React.FC = () => {
 }
 
 const IndexPage = () => {
-  const pageAnimation = useSpring({
-    config: config.molasses,
-    delay: 0,
-    from: { opacity: 0, transform: theme.transform.matrix.from },
-    to: { opacity: 1, transform: theme.transform.matrix.to }
-  })
   return (
     <Layout>
       <SEO />
-      <AnimatedBox style={pageAnimation}>
-        <IndexPageComp />
-      </AnimatedBox>
+      <IndexPageComp />
     </Layout>
   )
 }

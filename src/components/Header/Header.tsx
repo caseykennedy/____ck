@@ -9,7 +9,7 @@ import { Link } from 'gatsby'
 import { useSpring, config } from 'react-spring'
 import { Scrambler } from 'react-text-scrambler'
 
-import { Heading } from '../../elements'
+import { Text, Heading } from '../../elements'
 
 import theme from '../../../config/theme'
 
@@ -31,20 +31,22 @@ const Header: React.FC = () => {
           <Link to="/" className="js-hover" aria-label="core37, back to home">
             <Heading as="h1" fontSize={[1, 2, 3]} mb={0}>
               <Scrambler
-                text={'● CASEY KENNEDY'}
+                text={'CASEY KENNEDY'}
                 characters={'●○'}
                 duration={500}
                 renderIn={500}
                 changeFrom={'abcdefghijk'}
               />
               <br />
-              <Scrambler
-                text={'designer, developer, digital alchemist'}
-                characters={'●○'}
-                duration={800}
-                renderIn={800}
-                changeFrom={'abcdefghijk'}
-              />
+              <Text fontSize={0} mt={2}>
+                <Scrambler
+                  text={'designer ● developer ● digital alchemist'}
+                  characters={'●○'}
+                  duration={800}
+                  renderIn={800}
+                  changeFrom={'abcdefghijk/'}
+                />
+              </Text>
             </Heading>
           </Link>
         </S.Logo>

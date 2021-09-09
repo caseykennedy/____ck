@@ -19,7 +19,7 @@ import { Rotate } from '../../styles/transitions'
 // ___________________________________________________________________
 
 // export const Header = styled(Box)<{ bg: string }>`
-export const Header = styled(AnimatedFlex)`
+export const Header = styled(Flex)`
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
