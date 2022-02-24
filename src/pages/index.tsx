@@ -54,7 +54,7 @@ const IndexPageComp: React.FC = () => {
           </Heading>
           <Heading as="h3">
             I’ve been practicing design and web development for over ➊➁ years
-            and independently consulting for the last ➏ years. Collaborating
+            and independently consulting for over ➏ years. Collaborating
             with startups, established brands and anyone with a great
             idea—advising on visual identity, technical strategy and digital
             tooling.

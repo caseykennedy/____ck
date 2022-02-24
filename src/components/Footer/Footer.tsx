@@ -53,15 +53,14 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
             <Text mb={2}>Atlantis Casino Resort</Text>
             <Text mb={2}>noip.com</Text>
             <Text mb={5}>Spheric Agency</Text>
-            <Text mb={2}>core37</Text>
-            <Text mb={2}>eOn mist&trade;</Text>
+            <Text mb={3}>core37</Text>
             <Text mb={2}>tetra/</Text>
           </Box>
           <Box width={[1 / 2, 1 / 2, 1 / 4]} mr={[0, 3, 3]} mb={[5, 5, 0]}>
             <Text mb={5} className="t--uppercase">
               ○ Capabilities
             </Text>
-            <Text mb={2}>web development</Text>
+            <Text mb={2}>web + app development</Text>
             <Text mb={2}>e-commerce</Text>
             <Text mb={5}>design systems</Text>
             
@@ -82,12 +81,13 @@ const Footer: React.FC<FooterShape> = ({ navData }) => {
               ○ Tech
             </Text>
             <Text mb={2}>react</Text>
+            <Text mb={2}>web3 / crypto</Text>
             <Text mb={2}>gatsby / next</Text>
             <Text mb={2}>javascript (ts)</Text>
             <Text mb={2}>html + css</Text>
             <Text mb={2}>graphQL</Text>
             <Text mb={2}>shopify / snipcart</Text>
-            <Text mb={5}>wordpress</Text>
+            <Text mb={5}>headless</Text>
           </Box>
           {/* <Box width={1}>
             <Text fontSize={[4, 5, 7]} mt={[4, 3, 0]}>
